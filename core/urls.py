@@ -1,7 +1,7 @@
 """core URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,8 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+from account.forms import (UserLoginForm)
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('index/', include('store.urls')),
+    path('', auth_views.LoginView.as_view(template_name='account/registration/login.html',
+                                                form_class=UserLoginForm), name='login'),
+    path('account/', include('account.urls', namespace="account")),
+    path('pay/', include('payment.urls', namespace="payment")),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
