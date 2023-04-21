@@ -3,8 +3,8 @@ from payment.models import *
 def categories(request):
     return{
         'usa': Category.objects.filter(location=0),   
-        'canada': Category.objects.filter(location=1),  
-        'europe': Category.objects.filter(location=2),  
+        'germany': Category.objects.filter(location=1),  
+        'australia': Category.objects.filter(location=2),  
         'pua': Category.objects.filter(location=3),  
         'categories': Category.objects.filter(location=-1),
         'category': Category.objects.all()

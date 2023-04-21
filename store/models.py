@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 # Category Model
 class Category(models.Model):
-    STATUS_CHOICES = ((-1,'Side Menu'),(0,'USA Banks'), (1,"Canada Banks"), (2,"European Banks"),(3,"Pua and Fullz"))
+    STATUS_CHOICES = ((-1,'Main Menu'),(0,'USA Banks'), (1,"Germany Banks"), (2,"Australia Banks"),(3,"Pua and Fullz"))
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
     location = models.IntegerField(choices=STATUS_CHOICES, default=-1)
