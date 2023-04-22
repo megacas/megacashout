@@ -22,6 +22,7 @@ from account.forms import (UserLoginForm)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', include('store.urls')),
+    path('verify/', include('hubtel.urls')),
     path('', auth_views.LoginView.as_view(template_name='account/registration/login.html',
                                                 form_class=UserLoginForm), name='login'),
     path('account/', include('account.urls', namespace="account")),

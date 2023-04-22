@@ -6,6 +6,7 @@ from .models import User_otp
 from .forms import VerifyForm
 from django.http import JsonResponse,HttpResponse
 import json
+from store.models import *
 from account.tokens import account_activation_token
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
@@ -64,6 +65,7 @@ def otp_form(request):
             user = request.user
             if verify_otp(otp_code, user):
                 user.verified = True
+                user.is_active = True
                 user.save()
                 return redirect("home")
             else:
@@ -141,7 +143,7 @@ def send_activation_link_via_sms(request):
     url = 'https://smsc.hubtel.com/v1/messages/send'
     username = 'xhaewwud'
     password = 'toctlvok'
-    sender_id = 'Techchap'
+    sender_id = 'MegaCashout'
     phone_number = str("+233"+str(request.user.mobile))
     user = request.user
     
@@ -169,4 +171,36 @@ def send_activation_link_via_sms(request):
     else:
         # handle error
         return HttpResponse("Something went wrong")
-   
+
+def send_link(request,product_id):
+    product = Product.objects.get(id=product_id)
+    url = 'https://smsc.hubtel.com/v1/messages/send'
+    username = 'xhaewwud'
+    password = 'toctlvok'
+    sender_id = 'MegaCashout'
+    phone_number = str("+233"+str(request.user.mobile))
+    user = request.user
+    
+    current_site = get_current_site(request)
+    activation_link = product.pdf.url
+
+    message = 'Hi {0}, Thank you for your purchase. Please click the link below to download your pdf: {1}. visit this link to buy a decryptor'.format(user.user_name, activation_link)
+
+    data = {
+        'from': sender_id,
+        'to': phone_number,
+        'content': message
+    }
+
+    headers = {
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.post(url, headers=headers, data=json.dumps(data), auth=(username, password))
+
+    if response.status_code == 201:
+        # handle success
+        return render(request, 'account/registration/buy_email_confirm.html')
+    else:
+        # handle error
+        return HttpResponse("Something went wrong")
