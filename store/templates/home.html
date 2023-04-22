@@ -1,228 +1,25 @@
-<!DOCTYPE html>
-{% load static %}
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-
-    <link rel="stylesheet" href="{% static 'css/main1.css' %}">
-    <link rel="stylesheet" href="{% static 'css/media.css' %}">
-
-    <title>
-        MegaCashout</title>
-   <meta name="viewport" content="width=1024">
-    
-</head>
-<body>
-
-    <header class="header">
-  <div class="search_-header">
-    <form action="">
-      <input type="text" class="search__input" id="search__input" placeholder="Search">
-        <div id="search-result">
-          
+{% extends 'base.html' %}
+{% block content %}
+<div class="flex">
+  <div class="flex-1 mt-8 rounded-lg bg-gray-700 p-4"><!-- Add a div here to wrap the content with a margin -->
+    <div class="mx-4 mt-8 sm:mx-0">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-gray-800 rounded-lg p-4">
+          <h2 class="text-lg font-bold mb-2">Box 1</h2>
+          <p class="text-sm">Some subtext here</p>
         </div>
-      <button class="btn__search">
-        <img src="assets/search.png" alt="">
-      </button>
-      <div class="dropdown_menu__header"></div>
-    </form>
-  </div>
-  <div class="container-fluid">
-    <div class="content__header">
-      <div class="navigation__header" data-categories="{&quot;357&quot;:&quot;PUA AZ LOGS&quot;,&quot;356&quot;:&quot;PUA PA LOGS&quot;,&quot;337&quot;:&quot;Full Info+DL+AN:RN&quot;,&quot;461&quot;:&quot;Full Info+DL&quot;,&quot;302&quot;:&quot;Full Info USA(1$)&quot;,&quot;10&quot;:&quot;PayPal&quot;,&quot;141&quot;:&quot;USA_BANK(self-registrated )&quot;,&quot;14&quot;:&quot;CHASE+AN_RN&quot;,&quot;501&quot;:&quot;Okcu+AN_RN&quot;,&quot;354&quot;:&quot;BA+Email&quot;,&quot;442&quot;:&quot;Coastal24+AN_RN&quot;,&quot;406&quot;:&quot;Synovus+AN_RN+NAME&quot;,&quot;277&quot;:&quot;FNBO+AN_RN+NAME&quot;,&quot;293&quot;:&quot;Wellsfargo+adres&quot;,&quot;361&quot;:&quot;SNB+AN_RN&quot;,&quot;510&quot;:&quot;Members1st+NAME&quot;,&quot;383&quot;:&quot;Firstbanktexas+AN_RN&quot;,&quot;186&quot;:&quot;Hillsbank+AN_RN&quot;,&quot;509&quot;:&quot;CBNA+AN_RN&quot;,&quot;251&quot;:&quot;Fcbanking+AN_RN&quot;,&quot;500&quot;:&quot;FMB+AN_RN&quot;,&quot;359&quot;:&quot;PUA MIX LOGS&quot;,&quot;106&quot;:&quot;Vystarcu+AN_RN&quot;,&quot;281&quot;:&quot;Huntington+AN_RN+NAME&quot;,&quot;220&quot;:&quot;Campuscu+AN_RN&quot;,&quot;512&quot;:&quot;Full Info USA (15$)&quot;,&quot;389&quot;:&quot;Iberia+AN_RN&quot;,&quot;486&quot;:&quot;Northwest+AN_RN&quot;,&quot;504&quot;:&quot;Mynycb+AN_RN&quot;,&quot;507&quot;:&quot;Riverviewbank+AN_RN&quot;,&quot;368&quot;:&quot;FirstCommerceCU+AN_RN&quot;,&quot;401&quot;:&quot;Academybank+AN_RN&quot;,&quot;391&quot;:&quot;4frontcu+AN_RN&quot;,&quot;227&quot;:&quot;Cutx+AN_RN&quot;,&quot;235&quot;:&quot;FFIN+AN_RN&quot;,&quot;218&quot;:&quot;Ggolden1+AN_RN&quot;,&quot;511&quot;:&quot;Key(bussines)+name&quot;,&quot;318&quot;:&quot;Vibeaccount+AN_RN+Name&quot;,&quot;76&quot;:&quot;PNC+AN_RN+Name&quot;,&quot;379&quot;:&quot;Huntington+AN_RN+Adres&quot;,&quot;397&quot;:&quot;AAFCU+AN_RN&quot;,&quot;9&quot;:&quot;Wells Fargo+AN_RN&quot;,&quot;224&quot;:&quot;Vystarcu+AN_RN+NAME&quot;,&quot;502&quot;:&quot;myinvestorsbank(log:pass+random)&quot;,&quot;494&quot;:&quot;Prosperitybankusa(log:pass+random)&quot;,&quot;468&quot;:&quot;Full Info USA (10$)&quot;,&quot;355&quot;:&quot;LA PUA LOGS&quot;,&quot;168&quot;:&quot;Firstrepublic+AN_RN&quot;,&quot;283&quot;:&quot;SDCCU+AN_RN+NAME&quot;,&quot;471&quot;:&quot;Ncsecu+AN_RN&quot;,&quot;75&quot;:&quot;CITIZENS+AN_RN+Name&quot;,&quot;498&quot;:&quot;Suffolkfcu+AN_RN&quot;,&quot;426&quot;:&quot;Cusocal+Adres&quot;,&quot;508&quot;:&quot;Conwaynational+NAME&quot;,&quot;503&quot;:&quot;Cnbank+AN_RN&quot;,&quot;446&quot;:&quot;Scfederal+AN_RN+Name&quot;,&quot;178&quot;:&quot;Onpoint+AN_RN&quot;,&quot;444&quot;:&quot;RocklandTrust+AN_RN&quot;,&quot;479&quot;:&quot;Anbtx+AN_RN&quot;,&quot;206&quot;:&quot;Ucbi+AN_RN&quot;,&quot;176&quot;:&quot;Citi.com(CC accounts)&quot;,&quot;98&quot;:&quot;CITI+AN_RN+NAME+ADRESS&quot;,&quot;222&quot;:&quot;SANTANDER+AN_RN+NAME&quot;,&quot;169&quot;:&quot;Southstatebank+AN_RN&quot;,&quot;288&quot;:&quot;Rbfcu+AN_RN+NAME&quot;,&quot;411&quot;:&quot;FirstTechfed+Adres&quot;,&quot;488&quot;:&quot;Kpcu(Log:pass)&quot;,&quot;301&quot;:&quot;COMERICA+AN_RN+NAME&quot;,&quot;402&quot;:&quot;Additionfi+AN_RN&quot;,&quot;506&quot;:&quot;Wescom+AN_RN&quot;,&quot;382&quot;:&quot;Mygenfcu+AN_RN&quot;,&quot;487&quot;:&quot;Veritexbank+AN_RN&quot;,&quot;316&quot;:&quot;Selliemae+AN_RN+Name&quot;,&quot;236&quot;:&quot;Regions+AN_RN+NAME&quot;,&quot;496&quot;:&quot;Mobiloilcu+Name&quot;,&quot;314&quot;:&quot;KEY+AN_RN+NAME&quot;,&quot;160&quot;:&quot;Vystarcu+AN_RN&quot;,&quot;248&quot;:&quot;Fcbanking+AN_RN+NAME&quot;,&quot;505&quot;:&quot;PUA WA LOGS&quot;,&quot;202&quot;:&quot;OZK+AN_RN+NAME&quot;,&quot;485&quot;:&quot;Prosperitybanktx+NAME&quot;,&quot;263&quot;:&quot;FHB+AN_RN+NAME&quot;,&quot;445&quot;:&quot;APGFCU+Info&quot;,&quot;499&quot;:&quot;Dollarbank+NAME&quot;,&quot;495&quot;:&quot;Freedomcu(log:pass+random)&quot;,&quot;52&quot;:&quot;Full Info USA (4$)&quot;,&quot;284&quot;:&quot;Salliemae+AN_RN+NAME&quot;,&quot;92&quot;:&quot;53+AN_RN&quot;,&quot;17&quot;:&quot;Google_voice&quot;,&quot;497&quot;:&quot;PUA IL LOGS&quot;,&quot;441&quot;:&quot;AndrewsFCU+Adres&quot;,&quot;68&quot;:&quot;Citi+AN_RN&quot;,&quot;489&quot;:&quot;Westerracu+NAME&quot;,&quot;60&quot;:&quot;Schwab(log:pass)&quot;,&quot;116&quot;:&quot;LMCU+AN_RN+NAME&quot;,&quot;225&quot;:&quot;USAA+AN_RN&quot;,&quot;93&quot;:&quot;TCFbank+AN_RN&quot;,&quot;62&quot;:&quot;PNC+AN_RN&quot;,&quot;16&quot;:&quot;Huntington+AN_RN&quot;,&quot;82&quot;:&quot;Bank of the west+AN_RN&quot;,&quot;175&quot;:&quot;FNB+AN_RN&quot;,&quot;221&quot;:&quot;FNBO+AN_RN&quot;,&quot;306&quot;:&quot;Efirstbank+AN_RN+NAME&quot;,&quot;91&quot;:&quot;Gtefinancial+AN_RN+name&quot;,&quot;493&quot;:&quot;Floridacentralcu+AN_RN&quot;,&quot;315&quot;:&quot;Vibecreditunion+AN_RN+Name&quot;,&quot;55&quot;:&quot;merrickbank-сard&quot;,&quot;433&quot;:&quot;Chimebank+AN_RN&quot;,&quot;107&quot;:&quot;Applefcu+AN_RN+Name&quot;,&quot;23&quot;:&quot;BBT+Account_number+Routing&quot;,&quot;110&quot;:&quot;53+AN_RN+NAME&quot;,&quot;492&quot;:&quot;UFCU+AN_RN&quot;,&quot;491&quot;:&quot;Riverbankandtrust+AN_RN&quot;,&quot;490&quot;:&quot;Fsblouise+AN_RN&quot;,&quot;457&quot;:&quot;BMO+INFO&quot;,&quot;57&quot;:&quot;COMERICA+AN_RN&quot;,&quot;481&quot;:&quot;bankafirst(log:pass+random)&quot;,&quot;390&quot;:&quot;Sccu(log:pass+random)&quot;,&quot;27&quot;:&quot;WesternUnion&quot;,&quot;388&quot;:&quot;Gesa+AN_RN+NAME&quot;,&quot;464&quot;:&quot;Arrowheadcu+Name&quot;,&quot;482&quot;:&quot;Americanheritagecu+Name&quot;,&quot;238&quot;:&quot;VACU+AN_RN&quot;,&quot;201&quot;:&quot;Aacreditunion+AN_RN&quot;,&quot;208&quot;:&quot;OZK+AN_RN&quot;,&quot;216&quot;:&quot;Gtefinancial+AN_RN&quot;,&quot;484&quot;:&quot;Atfcu+AN_RN&quot;,&quot;346&quot;:&quot;FirstTechfed+AN_RN&quot;,&quot;70&quot;:&quot;KEY+AN_RN&quot;,&quot;392&quot;:&quot;MIX bank(log:pass)&quot;,&quot;358&quot;:&quot;Ithinkfi+AN_RN&quot;,&quot;483&quot;:&quot;Datcu+AN_RN&quot;,&quot;256&quot;:&quot;Kinecta+AN_RN&quot;,&quot;463&quot;:&quot;salliemae(log:pass+random)&quot;,&quot;428&quot;:&quot;Langleyfcu+AN_RN&quot;,&quot;140&quot;:&quot;TDAmeritrade+AN_RN&quot;,&quot;414&quot;:&quot;Credithuman+AN_RN+NAME&quot;,&quot;72&quot;:&quot;Optum+AN_RN&quot;,&quot;87&quot;:&quot;US bank (log:pas)&quot;,&quot;262&quot;:&quot;FHB+AN_RN&quot;,&quot;22&quot;:&quot;TDbank +Account_number+Routing_number&quot;,&quot;480&quot;:&quot;Americanheritagecu+AN_RN&quot;,&quot;67&quot;:&quot;Citi(log:pass)&quot;,&quot;460&quot;:&quot;langley(log:pass+random)&quot;,&quot;340&quot;:&quot;MSUFCU+AN+RN&quot;,&quot;73&quot;:&quot;Citi+AN_RN+Name&quot;,&quot;470&quot;:&quot;Twinstar+AN_RN&quot;,&quot;475&quot;:&quot;Myinvestorsbank+AN_RN&quot;,&quot;472&quot;:&quot;Trumarkonline+AN_RN&quot;,&quot;476&quot;:&quot;1Stunitedcu+AN_RN&quot;,&quot;213&quot;:&quot;Full info WORLD&quot;,&quot;434&quot;:&quot;Acnb+Info&quot;,&quot;473&quot;:&quot;Freedomcu+AN_RN&quot;,&quot;320&quot;:&quot;Mysummit+AN_RN&quot;,&quot;438&quot;:&quot;Centrisfcu+AN_RN&quot;,&quot;478&quot;:&quot;Hughesfcu+AN_RN+Name&quot;,&quot;477&quot;:&quot;Univest+AN_RN&quot;,&quot;180&quot;:&quot;Firstcitizens+AN_RN&quot;,&quot;286&quot;:&quot;BBT+AN_RN+NAME&quot;,&quot;40&quot;:&quot;MTB+AN_RN+NAME&quot;,&quot;134&quot;:&quot;Wellsfargo+AN_RN+info&quot;,&quot;192&quot;:&quot;Trustmark+AN_RN&quot;,&quot;474&quot;:&quot;centrisfcu(log:pass+random)&quot;,&quot;466&quot;:&quot;hsabank(log:pass+random)&quot;,&quot;58&quot;:&quot;comerica(log:pass)&quot;,&quot;138&quot;:&quot;Umpquabank+AN_RN&quot;,&quot;381&quot;:&quot;Synchronybank+Adres&quot;,&quot;348&quot;:&quot;UMB+AN_RN+INFO&quot;,&quot;393&quot;:&quot;Bankatfirst+AN_RN&quot;,&quot;469&quot;:&quot;FULL INFO USA (BIG BASE)&quot;,&quot;366&quot;:&quot;COMPANY BANK LOGS&quot;,&quot;342&quot;:&quot;Sccu+AN_RN&quot;,&quot;123&quot;:&quot;chimebank(log:pass)&quot;,&quot;38&quot;:&quot;Citizens(log:pass)&quot;,&quot;467&quot;:&quot;andigo(log:pass+random)&quot;,&quot;360&quot;:&quot;Full Info USA (8$)&quot;,&quot;459&quot;:&quot;Kohler(log:pass+random)&quot;,&quot;174&quot;:&quot;DISCOWER+AN_RN+NAME+Adress&quot;,&quot;370&quot;:&quot;schoolsfirstfcu+AN_RN&quot;,&quot;465&quot;:&quot;CIT+AN_RN&quot;,&quot;226&quot;:&quot;USAA+AN_RN+NAME&quot;,&quot;191&quot;:&quot;Bannerbank+AN_RN&quot;,&quot;353&quot;:&quot;NY PUA LOGS&quot;,&quot;53&quot;:&quot;UnionBank+AN_RN&quot;,&quot;376&quot;:&quot;Schoolsfirstfcu+AN_RN+NAME&quot;,&quot;273&quot;:&quot;Usaa+AN_RN+INFO&quot;,&quot;309&quot;:&quot;Bank of the west+AN_RN+INFO&quot;,&quot;228&quot;:&quot;FNBO+AN_RN+NAME+Adress&quot;,&quot;339&quot;:&quot;KEY+AN_RN+INFO&quot;,&quot;350&quot;:&quot;KEY+AN_RN+Adress&quot;,&quot;287&quot;:&quot;BBT+AN_RN+INFO&quot;,&quot;338&quot;:&quot;Usaa+AN_RN+FULL&quot;,&quot;118&quot;:&quot;TD+AN_RN+NAME&quot;,&quot;244&quot;:&quot;PNC+INFO+FULL&quot;,&quot;279&quot;:&quot;PNC+AN_RN+INFO&quot;,&quot;417&quot;:&quot;FrostBank+Adres&quot;,&quot;452&quot;:&quot;FrostBank+AN+RN+NAME&quot;,&quot;264&quot;:&quot;Patelco+AN_RN+NAME&quot;,&quot;367&quot;:&quot;FCCU+AN_RN&quot;,&quot;409&quot;:&quot;Penfed+Adres&quot;,&quot;115&quot;:&quot;Applefcu+AN_RN&quot;,&quot;184&quot;:&quot;Greenstate+AN_RN&quot;,&quot;378&quot;:&quot;Uhcu+AN_RN+Info&quot;,&quot;108&quot;:&quot;Sccu+AN_RN+NAME&quot;,&quot;289&quot;:&quot;Rbfcu+AN_RN+INFO&quot;,&quot;332&quot;:&quot;Cefcu+AN_RN&quot;,&quot;462&quot;:&quot;MYUI MIX&quot;,&quot;373&quot;:&quot;Merrickbank+AN_RN+Adres&quot;,&quot;303&quot;:&quot;TCF+AN_RN+INFO&quot;,&quot;132&quot;:&quot;TCF+AN_RN+NAME&quot;,&quot;198&quot;:&quot;Flagstar.com AN+RN+NAME&quot;,&quot;412&quot;:&quot;KPCU+Adres&quot;,&quot;35&quot;:&quot;CITIZENS+AN_RN(READ INFO!)&quot;,&quot;398&quot;:&quot;Citizens+Adres&quot;,&quot;95&quot;:&quot;DISCOWER+AN_RN+NAME&quot;,&quot;352&quot;:&quot;Golden1+AN_RN+INFO&quot;,&quot;21&quot;:&quot;Suntrust+AN_RN&quot;,&quot;61&quot;:&quot;Suntrust+AN_RN+Name&quot;,&quot;294&quot;:&quot;Suntrust+Full_Info&quot;,&quot;65&quot;:&quot;Regions+AN_RN&quot;,&quot;280&quot;:&quot;Regions+AN_RN+INFO&quot;,&quot;24&quot;:&quot;Navyfederal+AN_RN&quot;,&quot;163&quot;:&quot;Navyfederal+AN_RN+Name&quot;,&quot;278&quot;:&quot;Navyfederal+AN_RN+Name+Adres&quot;,&quot;231&quot;:&quot;Bank of the west+AN_RN+NAME&quot;,&quot;210&quot;:&quot;UWCU+AN_RN&quot;,&quot;400&quot;:&quot;Centralwcu+AN_RN&quot;,&quot;151&quot;:&quot;Shops&quot;,&quot;451&quot;:&quot;ZionsBank+Info&quot;,&quot;285&quot;:&quot;Suntrust+AN_RN+INFO&quot;,&quot;99&quot;:&quot;CHASE+AN_RN+NAME&quot;,&quot;181&quot;:&quot;Unifyfcu+AN_RN&quot;,&quot;37&quot;:&quot;BOA+AN_RN&quot;,&quot;240&quot;:&quot;Optum+AN_RN+Name&quot;,&quot;292&quot;:&quot;Optum+AN_RN+INFO&quot;,&quot;387&quot;:&quot;Schoolsfirstfcu+AN_RN+INFO&quot;,&quot;333&quot;:&quot;Merrickbank+AN_RN&quot;,&quot;450&quot;:&quot;Valley+Info&quot;,&quot;313&quot;:&quot;Thirdfederalonline+Info&quot;,&quot;254&quot;:&quot;UBS+AN_RN&quot;,&quot;290&quot;:&quot;UBS+AN_RN+NAME&quot;,&quot;211&quot;:&quot;Southside+AN_RN&quot;,&quot;155&quot;:&quot;Peoples+AN_RN+NAME&quot;,&quot;425&quot;:&quot;Commerce+AN_RN&quot;,&quot;424&quot;:&quot;Commerce+Adres&quot;,&quot;458&quot;:&quot;CIBC+INFO&quot;,&quot;456&quot;:&quot;Americafirst+info&quot;,&quot;455&quot;:&quot;Bmifcu+AN_RN&quot;,&quot;440&quot;:&quot;NuvisionFCU+Adres&quot;,&quot;399&quot;:&quot;Andigo+AN_RN&quot;,&quot;347&quot;:&quot;NBTBANK+AN_RN+NAME&quot;,&quot;296&quot;:&quot;UMB+AN_RN+NAME&quot;,&quot;304&quot;:&quot;Golden1+AN_RN+NAME&quot;,&quot;86&quot;:&quot;USbank+AN_RN&quot;,&quot;88&quot;:&quot;USbank+AN_RN+NAME&quot;,&quot;454&quot;:&quot;Tiaa+info&quot;,&quot;81&quot;:&quot;DISCOWER+AN_RN&quot;,&quot;443&quot;:&quot;CapitalOne+Info&quot;,&quot;112&quot;:&quot;Ally+AN_RN+NAME&quot;,&quot;335&quot;:&quot;Fireflycu+AN_RN&quot;,&quot;26&quot;:&quot;UMB+AN_RN&quot;,&quot;344&quot;:&quot;NBTBANK+AN_RN&quot;,&quot;453&quot;:&quot;Chime+Info&quot;,&quot;427&quot;:&quot;Langleyfcu+Adres&quot;,&quot;253&quot;:&quot;Rbfcu+AN_RN&quot;,&quot;242&quot;:&quot;FNBO+INFO+FULL&quot;,&quot;232&quot;:&quot;UVAC+AN_RN&quot;,&quot;219&quot;:&quot;Lafinancial+AN_RN&quot;,&quot;324&quot;:&quot;Afcu+AN_RN&quot;,&quot;209&quot;:&quot;Aplusfcu+AN_RN&quot;,&quot;204&quot;:&quot;Edwardjones+AN_RN&quot;,&quot;449&quot;:&quot;StateFarm+Info&quot;,&quot;448&quot;:&quot;Scotiabank+Info&quot;,&quot;49&quot;:&quot;HSBC+AN_RN+INFO&quot;,&quot;447&quot;:&quot;Barclaysus+Info&quot;,&quot;435&quot;:&quot;SSFCU+Adres&quot;,&quot;407&quot;:&quot;Firstcitizens+Adres&quot;,&quot;78&quot;:&quot;Etrade+AN_RN&quot;,&quot;420&quot;:&quot;Aacreditunion+Adres&quot;,&quot;233&quot;:&quot;AN+RN+Full info(Fresh USA)&quot;,&quot;437&quot;:&quot;Creditone+Adres&quot;,&quot;377&quot;:&quot;Greatwesternbank+AN_RN+Info&quot;,&quot;415&quot;:&quot;IBC+Adres&quot;,&quot;101&quot;:&quot;Woodforest+AN_RN&quot;,&quot;234&quot;:&quot;Unitedfcu+AN_RN&quot;,&quot;119&quot;:&quot;Nymcu+an_rn+name&quot;,&quot;345&quot;:&quot;TDbank(log:pass)&quot;,&quot;83&quot;:&quot;SANTANDER+AN_RN&quot;,&quot;369&quot;:&quot;RobinsFCU+AN_RN&quot;,&quot;102&quot;:&quot;Amex+info&quot;,&quot;436&quot;:&quot;Becu+Adres&quot;,&quot;185&quot;:&quot;TCUNET+AN_RN&quot;,&quot;215&quot;:&quot;Simple+AN_RN&quot;,&quot;189&quot;:&quot;Simmonsbank+AN_RN+NAME&quot;,&quot;276&quot;:&quot;Amex+AN_RN+NAME&quot;,&quot;336&quot;:&quot;bell.bank +AN_RN&quot;,&quot;237&quot;:&quot;Uhcu+AN_RN&quot;,&quot;418&quot;:&quot;BNC AN+RN&quot;,&quot;260&quot;:&quot;Flagstar.com AN+RN&quot;,&quot;272&quot;:&quot;VACU+AN_RN+NAME&quot;,&quot;114&quot;:&quot;Simple+AN_RN+NAME&quot;,&quot;97&quot;:&quot;Schwab+AN_RN+NAME&quot;,&quot;105&quot;:&quot;Alliant+AN_RN+NAME&quot;,&quot;130&quot;:&quot;Affinityfcu(log:pass)&quot;,&quot;439&quot;:&quot;Suncoastcu+Adres&quot;,&quot;423&quot;:&quot;BankMobile AN+RN&quot;,&quot;422&quot;:&quot;BankMobile+Adres&quot;,&quot;432&quot;:&quot;Salliemae+AN_RN+Adres&quot;,&quot;380&quot;:&quot;ROBINFCU+Adres&quot;,&quot;419&quot;:&quot;Parknationalbank+Adres&quot;,&quot;430&quot;:&quot;Michiganfirst+Adres&quot;,&quot;197&quot;:&quot;Citadelbank+AN_RN&quot;,&quot;421&quot;:&quot;HiwayCU+Adres&quot;,&quot;385&quot;:&quot;gulfbank+AN_RN&quot;,&quot;194&quot;:&quot;Gatecity+AN_RN&quot;,&quot;331&quot;:&quot;Columbiabank+AN_RN&quot;,&quot;282&quot;:&quot;Firstpremier+AN_RN&quot;,&quot;317&quot;:&quot;Amex+AN_RN&quot;,&quot;416&quot;:&quot;Thirdfederalbank+info&quot;,&quot;196&quot;:&quot;Gatecity+AN_RN+NAME&quot;,&quot;259&quot;:&quot;FFIN+AN_RN+NAME&quot;,&quot;230&quot;:&quot;Applebank+AN_RN&quot;,&quot;413&quot;:&quot;Applebank+Adres&quot;,&quot;322&quot;:&quot;Visionsfcu+AN_RN&quot;,&quot;394&quot;:&quot;Middlesexbank+AN_RN&quot;,&quot;170&quot;:&quot;IBC+AN_RN&quot;,&quot;249&quot;:&quot;Glacierbank+AN_RN+NAME&quot;,&quot;410&quot;:&quot;Onpoint+Adres&quot;,&quot;298&quot;:&quot;Asbhawaii+AN_RN&quot;,&quot;323&quot;:&quot;Onenevada+AN_RN&quot;,&quot;321&quot;:&quot;Traviscu+AN_RN&quot;,&quot;274&quot;:&quot;Teachers AN_RN&quot;,&quot;187&quot;:&quot;Firstmarkcu+AN_RN&quot;,&quot;405&quot;:&quot;Baxter+AN_RN+NAME&quot;,&quot;404&quot;:&quot;Fnbodirect+AN_RN+Adres&quot;,&quot;305&quot;:&quot;Fnbodirect+AN_RN&quot;,&quot;167&quot;:&quot;Emails(Autoreg)&quot;,&quot;395&quot;:&quot;Gulfbank+Adres&quot;,&quot;363&quot;:&quot;UCCU+AN_RN&quot;,&quot;362&quot;:&quot;ffnbo(CC accounts)&quot;,&quot;54&quot;:&quot;Discover(log:pass)&quot;,&quot;386&quot;:&quot;interracu(log:pass)&quot;,&quot;384&quot;:&quot;illinoisbank+AN_RN&quot;,&quot;375&quot;:&quot;UVAC+Info&quot;,&quot;307&quot;:&quot;Wellsfargo_botnet&quot;,&quot;246&quot;:&quot;Huntington+AN_RN+FULL+DL&quot;,&quot;374&quot;:&quot;ROBINFCU+info&quot;,&quot;144&quot;:&quot;Discover(log:pass+balance)&quot;,&quot;365&quot;:&quot;Clearwatercreditunion+AN_RN&quot;,&quot;364&quot;:&quot;Desertfinancial+AN_RN&quot;,&quot;147&quot;:&quot;Discover-CC(log:pass+random)&quot;,&quot;310&quot;:&quot;Bank of the west+info+phone&quot;,&quot;311&quot;:&quot;Firstambank+AN+RN+NAME&quot;,&quot;165&quot;:&quot;WellsFargo(CC accounts)&quot;,&quot;48&quot;:&quot;Wellsfargo (log:pass)&quot;,&quot;299&quot;:&quot;SBA&quot;,&quot;351&quot;:&quot;Baxter+AN_RN&quot;,&quot;250&quot;:&quot;Peoplesbankal+AN_RN&quot;,&quot;127&quot;:&quot;SEFCU+AN_RN&quot;,&quot;245&quot;:&quot;Chartway+AN_RN&quot;,&quot;96&quot;:&quot;Fultonbank+AN_RN&quot;,&quot;56&quot;:&quot;creditone-cc&quot;,&quot;239&quot;:&quot;TD+AN_RN(CANADA)&quot;,&quot;343&quot;:&quot;dollar.bank(log:pass+random)&quot;,&quot;341&quot;:&quot;Starone+AN_RN&quot;,&quot;247&quot;:&quot;Regions+AN_RN+FULL+DL&quot;,&quot;59&quot;:&quot;Schwab+AN_RN&quot;,&quot;265&quot;:&quot;FNB+AN_RN+NAME&quot;,&quot;207&quot;:&quot;CFCU+AN_RN&quot;,&quot;268&quot;:&quot;comwideCU(log:pass+random)&quot;,&quot;329&quot;:&quot;deltacu(log:pass+random)&quot;,&quot;328&quot;:&quot;Tcunet(log:pass+random)&quot;,&quot;327&quot;:&quot;greenstate(log:pass+random)&quot;,&quot;326&quot;:&quot;ucbi(log:pass+random)&quot;,&quot;325&quot;:&quot;Firstcitizens(log:pass+random)&quot;,&quot;136&quot;:&quot;FNBO(log:pass+random)&quot;,&quot;319&quot;:&quot;BBVA+AN_RN+NAME&quot;,&quot;312&quot;:&quot;Navyarmyccu+AN_RN&quot;,&quot;200&quot;:&quot;Vanguard+AN_RN&quot;,&quot;308&quot;:&quot;Suntrust+Info+Phone&quot;,&quot;266&quot;:&quot;rfcul(log:pass+random)&quot;,&quot;255&quot;:&quot;TDECU+AN_RN&quot;,&quot;297&quot;:&quot;Robinsfcu(log:pass)&quot;,&quot;300&quot;:&quot;BancorpSouth+AN_RN+NAME&quot;,&quot;179&quot;:&quot;BancorpSouth(log:pass)&quot;,&quot;241&quot;:&quot;Alaskausa+AN_RN+Name&quot;,&quot;295&quot;:&quot;Regions+AN_RN+NAME+SSN&quot;,&quot;142&quot;:&quot;Full Info USA(Fresh)&quot;,&quot;291&quot;:&quot;Comwide+AN_RN+NAME&quot;,&quot;270&quot;:&quot;Ufcu(log:pass)&quot;,&quot;261&quot;:&quot;Aacreditunion(log:pass)&quot;,&quot;159&quot;:&quot;Samsclub&quot;,&quot;275&quot;:&quot;diamondCU+AN_RN&quot;,&quot;190&quot;:&quot;Flagstar(log:pass)&quot;,&quot;84&quot;:&quot;PNC(log:pass)Random&quot;,&quot;271&quot;:&quot;Vanguard(log:pass+random)&quot;,&quot;269&quot;:&quot;oneazCU(log:pass+random)&quot;,&quot;267&quot;:&quot;lmcu(log:pass+random)&quot;,&quot;243&quot;:&quot;TD+AN_RN+NAME(CANADA)&quot;,&quot;212&quot;:&quot;Citibank[AU]+AN_RN&quot;,&quot;203&quot;:&quot;Centerstatebank+AN_RN&quot;,&quot;258&quot;:&quot;Schwab+AN_RN+FULL+DL&quot;,&quot;257&quot;:&quot;KEY+AN_RN+FULL+DL&quot;,&quot;252&quot;:&quot;Comwide+AN_RN&quot;,&quot;214&quot;:&quot;Alaskausa+AN_RN&quot;,&quot;229&quot;:&quot;Simmonsbank+AN_RN&quot;,&quot;183&quot;:&quot;Full Info USA(+CREDIT REPORT)&quot;,&quot;195&quot;:&quot;Wecu+AN_RN+NAME&quot;,&quot;182&quot;:&quot;BancorpSouth+AN_RN&quot;,&quot;223&quot;:&quot;(Canada)RBC+AN_RN&quot;,&quot;193&quot;:&quot;Kfcu+AN_RN+NAME&quot;,&quot;36&quot;:&quot;53.com(log:pass)&quot;,&quot;217&quot;:&quot;Synovus (log:pass)&quot;,&quot;205&quot;:&quot;Raymondjames+AN_RN&quot;,&quot;199&quot;:&quot;Purduefed+AN_RN&quot;,&quot;188&quot;:&quot;Ubank.com.au+AN_RN+NAME&quot;,&quot;177&quot;:&quot;FNB(log:pass)&quot;,&quot;109&quot;:&quot;Real Documents&quot;,&quot;148&quot;:&quot;Umpquabank (log:pass+random)&quot;,&quot;47&quot;:&quot;BBT(log:pass)&quot;,&quot;44&quot;:&quot;Suntrust(log:pass)&quot;,&quot;124&quot;:&quot;CreditCards(SALE!)&quot;,&quot;172&quot;:&quot;USA-CARDS(NEW!)&quot;,&quot;171&quot;:&quot;Citi(log:pass+random)&quot;,&quot;166&quot;:&quot;53.com(CC accounts)&quot;,&quot;164&quot;:&quot;navyfederal(log:pass+random)&quot;,&quot;162&quot;:&quot;bbvausa(log:pass+random)&quot;,&quot;161&quot;:&quot;woodforest(log:pass+random)&quot;,&quot;158&quot;:&quot;eBay&quot;,&quot;157&quot;:&quot;Citizens(log:pass+balance)&quot;,&quot;150&quot;:&quot;BBT(self-registrated )&quot;,&quot;156&quot;:&quot;Peoples(Log:pass+balance)&quot;,&quot;154&quot;:&quot;Amazon+cookies&quot;,&quot;153&quot;:&quot;principa(log:pass+random)&quot;,&quot;152&quot;:&quot;Bank of the west(Log:pass)&quot;,&quot;143&quot;:&quot;CreditCard (BOA + AN_RN)&quot;,&quot;149&quot;:&quot;BOA(self-registrated )&quot;,&quot;145&quot;:&quot;Chase (log:pass)&quot;,&quot;146&quot;:&quot;Amazon logs from botnet&quot;,&quot;33&quot;:&quot;CHASE(log:pass)&quot;,&quot;139&quot;:&quot;Ascendfcu(Log:pass+balance)&quot;,&quot;137&quot;:&quot;Ascendfcu+AN_RN&quot;,&quot;135&quot;:&quot;Fultonbank(Log:pass+balance)&quot;,&quot;133&quot;:&quot;REDSTONE+AN_RN&quot;,&quot;131&quot;:&quot;Sefcu(log:pass)&quot;,&quot;120&quot;:&quot;Traviscu+AN_RN+NAME&quot;,&quot;126&quot;:&quot;Deltacommunitycu(Log:pass+balance)&quot;,&quot;125&quot;:&quot;fairwinds(log:pass+balance)&quot;,&quot;129&quot;:&quot;ESL(log:pass)&quot;,&quot;121&quot;:&quot;Regions(log:pass)&quot;,&quot;122&quot;:&quot;Faerwinds+AN_RN&quot;,&quot;117&quot;:&quot;fairwinds(log:pass)&quot;,&quot;113&quot;:&quot;TCF(log+pass)&quot;,&quot;111&quot;:&quot;deltacommunitycu(log:pass)&quot;,&quot;100&quot;:&quot;Deltacommunitycu+AN_RN&quot;,&quot;64&quot;:&quot;Alliant+AN_RN&quot;,&quot;104&quot;:&quot;Navyfederal (log:pass)&quot;,&quot;103&quot;:&quot;Gteonline+AN_RN&quot;,&quot;71&quot;:&quot;Enter the site what you need&quot;,&quot;90&quot;:&quot;Pffcu(log:pass)&quot;,&quot;69&quot;:&quot;Oldnational&quot;,&quot;66&quot;:&quot;Huntington(log:pass)&quot;,&quot;79&quot;:&quot;Etrade(log:pass)&quot;,&quot;85&quot;:&quot;RBC(log:pass)Random&quot;,&quot;63&quot;:&quot;[USA]СreditCards(READ INFO)&quot;,&quot;31&quot;:&quot;ATT&quot;,&quot;29&quot;:&quot;BOA(log:pass)&quot;,&quot;42&quot;:&quot;Comm bank AU&quot;,&quot;28&quot;:&quot;Fidelity&quot;,&quot;74&quot;:&quot;hsbc.com.mx&quot;,&quot;50&quot;:&quot;Optumbank&quot;,&quot;80&quot;:&quot;Pffcu+AN_RN&quot;,&quot;46&quot;:&quot;PNC(log:pass)&quot;,&quot;43&quot;:&quot;Postbank.de for PayPal&quot;,&quot;30&quot;:&quot;poste.it bank&quot;,&quot;45&quot;:&quot;Santanderbank&quot;,&quot;25&quot;:&quot;verizon+secret&quot;,&quot;34&quot;:&quot;Акаунт Номер + Рут номер читать описание! [AN+RN read info!]&quot;,&quot;32&quot;:&quot;Emails&quot;,&quot;77&quot;:&quot;СreditCards&quot;,&quot;\/user\/profile&quot;:&quot;Profile deagusco&quot;,&quot;####&quot;:&quot;<hr>&quot;,&quot;\/user\/orders\/&quot;:&quot;My orders&quot;,&quot;\/user\/orders\/cancel\/&quot;:&quot;My cancels&quot;,&quot;#&quot;:&quot;<hr>&quot;,&quot;\/user\/balance&quot;:&quot;Transactions&quot;,&quot;\/user\/balance\/add\/btc&quot;:&quot;Fill up through Bitcoin&quot;,&quot;\/user\/balance\/add\/bch&quot;:&quot;Fill up through Bitcoin CASH&quot;}">
-        <a href="{% url 'home' %}" class="home_link"></a>
-
-        <div class="item_nav__header active-off group">
-          USA BANK + INFO <span class="arrow_menu__header"></span>
-          <div class="dropdown_menu__header">
-            {% for category in usa %}
-            <a href="{{category.get_absolute_url}}" class="link__menu">
-                {{category.name}}</a>{% endfor %}
-          </div>
+        <div class="bg-gray-800 rounded-lg p-4 mt-4 sm:mt-0 sm:ml-2">
+          <p class="text-sm">Box 2</p>
         </div>
-        <div class="item_nav__header active-off group">
-            GERMANY BANK + INFO <span class="arrow_menu__header"></span>
-            <div class="dropdown_menu__header">
-                {% for category in germany %}
-              <a href="{{category.get_absolute_url}}" class="link__menu">
-                  {{category.name}}</a>{% endfor %}
-            </div>
-          </div>
-          <div class="item_nav__header active-off group">
-            AUSTRALIAN BANKS + INFO <span class="arrow_menu__header"></span>
-            <div class="dropdown_menu__header">
-                {% for category in australia %}
-              <a href="{{category.get_absolute_url}}" class="link__menu">
-                  {{category.name}}</a>{% endfor %}
-            </div>
-          </div>
-          <div class="item_nav__header active-off group">
-            PUA & FULLZ <span class="arrow_menu__header"></span>
-            <div class="dropdown_menu__header">
-                {% for category in pua %}
-              <a href="{{category.get_absolute_url}}" class="link__menu">
-                  category.name</a>{% endfor %}
-            </div>
-          </div>
-        <!--canada-->
-         <div class="item_nav__header active-off group">
-          CANADA BANK +INFO  <span class="arrow_menu__header"></span>
-          <div class="dropdown_menu__header">
-            {% for category in canada %}
-            <a href="{{category.get_absolute_url}}" class="link__menu">
-                {{category.name}}</a>{% endfor %}
-          </div>
+        <div class="bg-gray-800 rounded-lg p-4 mt-4 sm:mt-0">
+          <h2 class="text-lg font-bold mb-2">Box 3</h2>
+          <p class="text-sm">Some subtext here</p>
         </div>
-        <!--<a href="./cc" class="link__menu" style="background-color: transparent; font-size: 12px;">-->
-        <!--      CREDIT CARD <span class=""></span>-->
-        <!--</a>-->
-        
+        <div class="bg-gray-800 rounded-lg p-4 mt-4 sm:mt-0 sm:ml-2">
+          <p class="text-sm">Box 4</p>
+        </div>
       </div>
-      <div class="right__header">
-        <div class="balance__header">Balance: <span id="bbalance">0</span><span>$</span></div>
-
-        <div class="menu_right__header">
-          MENU <i><img src="assets/arr.png" alt=""></i>
-          <div class="dropdown_menu__header">
-            <a href="..//user/profile" class="link__menu">Profile {{request.user.user_name}}</a>
-            <a href="####" class="link__menu">
-              <hr>
-            </a>
-            <a href="../user/orders/" class="link__menu">My orders</a>
-            <a href="../user/orders/cancel/" class="link__menu">My cancels</a>
-            <a href="#" class="link__menu">
-              <hr>
-            </a>
-            <a href="../user/balance" class="link__menu">Transactions</a>
-            <a href="../user/balance/add/btc" class="link__menu">Fill up through Bitcoin</a>
-            
-          </div>
-        </div>
-        <!--<a href="../cart/" title="Cart" class="link_cart__header" data-buy="Buy" data-incart="In cart">
-          <span class="coll_product__heder coll_product_cart">0</span>
-        </a>-->
-        <a href="../support" class="link_opov__header" title="Support XMPP">
-        </a>
-        <a href="../user/switch_lang" title="Lang" class="link_global__header">
-          <span class="coll_product__heder">ru</span>
-        </a>
-        <a href="../user/logout" class="link_exit__header" title="Logout">
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
-    
-    <div class="container-fluid">
-        <div class="content_main">
-            <div class="block__content">
-                <h2 class="main__title">
-                    <i><img src="assets/title6.png" alt=""></i> MegaCashout
-                </h2>
-
-                <div class="text__page">
-
-                    <p class="text__faq">
-                        <b>Welcome to the private shop Crd5.life!</b><br><br>
-
-                        Our store boasts a self-written engine, anti-DDoS system, abuzoustoychivym server. Do not keep
-                        any logs!<br><br>
-
-                        Attention! New return format. After buying the
-                        goods, you will have a countdown on the return time, at the moment it is
-                        2 hours, which is enough to check your account. Please specify the
-                        correct gills
-                        and always attach screenshots, otherwise the
-                        return will be denied!<br><br>
-
-                        Clients ' personal data is stored in a database with non-standard encryption and guaranteed
-                        security.<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-                        3. It is forbidden to transfer their accounts and link to the shop 3rd parties<br><br>
-
-                        4. For all questions, please contact the chat directly in the shop, or in
-                        crd5supp@outlook.com<br><br>
-
-                        5. Replacement of nevalid - return the cost of the account to the account in your personal
-                        account<br><br>
-
-                        6. Inactive for a month accounts - delete!<br><br>
-
-                        7. Balance from the store - not displayed<br><br>
-
-                        8. For non-compliance with the rules - account deletion without the right of
-                        restoration.<br><br>
-
-                        ACCORDING TO THE RULES OF REFUND WRITING AND SPECIFY IN THE GILLS BEFORE YOU BUY!
-                    </p>
-                    <input id="auth-token" type="hidden" value="33sQuUnS1aHNqffzhfFRYTqtCzF3japrr8"> 
-
-                </div>
-
-
-            </div>
-            <!--.block__content-->
-
-             <!--.block__content-->
-
- <div class="sitebar_left">
-    <div class="content_sitebar">
-
-
-        <div class="item__sitebar1 yyy">
-            {% for category in categories %}
-            <p class="yellow_text__sitebar"><a href="{{category.get_absolute_url}}" target="_blank">
-                {{category.name}}</a>
-            </p>
-            <br>
-            {% endfor %}
-            {% for category in category %}
-            <p class="yellow_text__sitebar"><a href="{{category.get_absolute_url}}" target="_blank">
-                Added {{category.number}} items in category {{category.name}}</a>
-            </p>
-            <br>
-            {% endfor %}
-        </div>
-
-
-
-
-    </div>
-</div> 
-
-        </div>
-        <!--.content_main-->
-
-    </div>
-    <!--.container-fluid-->
-
-
-
-
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/common.js' %}"></script>
-
-
-
-
-
-</body>
-</html>
+    </div>  
+</div>
+</div>
+{% endblock content %}
