@@ -62,7 +62,7 @@ def account_register(request):
             return redirect("otp_form")
     else:
         registerForm = RegistrationForm()
-    return render(request, "signup.html", {"form": registerForm})
+    return render(request, "account/registration/signup.html", {"form": registerForm})
 
 
 def account_activate(request, uidb64, token):
@@ -75,7 +75,7 @@ def account_activate(request, uidb64, token):
         user.verified = True
         user.save()
         login(request, user)
-        return redirect("account:dashboard")
+        return redirect("home")
     else:
         return render(request, "account/registration/activation_invalid.html")
 

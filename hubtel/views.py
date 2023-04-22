@@ -65,7 +65,7 @@ def otp_form(request):
             if verify_otp(otp_code, user):
                 user.verified = True
                 user.save()
-                return redirect("account:dashboard")
+                return redirect("home")
             else:
                 messages.error(request, "Incorrect OTP or Number not Supported. Please Request for SMS Verification.")
                 return redirect("otp_form")
