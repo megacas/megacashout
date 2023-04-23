@@ -14,9 +14,15 @@ from .models import  Customer
 from .tokens import account_activation_token
 from hubtel.views import send_otp
 from django.contrib.auth import login
+from payment.models import *
 @login_required
 def dashboard(request):
-    return render(request, "account/dashboard/dashboard.html", {"section": "profile", })
+    user = request.user
+    invoice = Invoice.objects.filter(sold=True,created_by=user)
+    data = {
+        "products":invoice
+    }
+    return render(request, "account/user/dashboard.html", context=data)
 
 
 @login_required

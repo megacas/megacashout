@@ -3,8 +3,8 @@
 {% block content %}
     <div class="row mt-12">
         <div class="col-12">
-            <div class="card">
-                <div class="card-header " style="background-color:black;display:flex;flex-direction:column;">
+            <div class="card" style="position:static;width:600px;">
+                <div class="card-header " style="background-color:black;">
                     <h3 class="text-center" style="color: White;">Email Confirmation</h3><img src="{% static 'images/logotop.svg' %}" height="22" width="94">
                 </div>
 
@@ -12,7 +12,7 @@
 
 
                 <!-- Button trigger modal -->
-                <div class="card-body" style="display:flex;flex-direction:column;justify-content:center;background-color:black;padding:3rem;color: White;">
+                <div class="card-body" style="justify-content:center;background-color:black;padding:3rem;color: White;">
                     Your Current Number:
 
                     <input type="text" id="email" style="text-transform:uppercase;color:black;width:100%;" placeholder="Enter Your Email" value="{{request.user.mobile}}" readonly>

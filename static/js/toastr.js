@@ -187,13 +187,18 @@
             }
 
             function notify(map) {
-                var options = getOptions();
-                var iconClass = map.iconClass || options.iconClass;
-
-                if (typeof (map.optionsOverride) !== 'undefined') {
-                    options = $.extend(options, map.optionsOverride);
-                    iconClass = map.optionsOverride.iconClass || iconClass;
-                }
+                var options = {
+                    iconClass: 'default-icon-class'
+                  };
+                  
+                  // Get map options and update options object
+                  var mapOptions = getOptions();
+                  options = Object.assign(options, mapOptions);
+                  
+                  // Update iconClass based on map options override
+                  if (map.optionsOverride && map.optionsOverride.iconClass) {
+                    iconClass = map.optionsOverride.iconClass;
+                  }
 
                 if (shouldExit(options, map)) { return; }
 

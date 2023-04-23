@@ -1,0 +1,55 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}Da-Forum|Dashboard{% endblock %} 
+{% block content %}
+
+<main class="pt-5">
+  <div class="container" style="max-width: 1000px">
+    <div class="col-12">
+      <h1 class="h2">@{{user.user_name|title}} your Purchase History</h1>
+    </div>
+    <div class="col-12 d-flex justify-content-between">
+      <div>See your <b>bought items</b> and re-download logs</div>
+      
+    </div>
+    <hr />
+  </br>
+  </div>
+<div class="container" style="max-width: 1000px">
+{% for products in products %}
+<div class="row g-3">
+      <div class="col-12 bg-dark p-3 d-flex justify-content-between">
+        <div class="d-flex d-flex-inline">
+
+          <div class="pe-3">{{ products.product.name }}</div>
+          <div class="pe-3">{{ products.product.Title }}</div>
+          <div class="pe-3">With Balance: ${{ products.product.Balance }}</div>
+          <div class="pe-3">Contains {{ products.product.Info }}</div>
+        </div>
+        <div class="text-end">
+          Total paid: <span class="fw-bold">${{ products.product.price }}</span>
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-4 order-md-last p-0 order-3">
+        <div class="card mb-3 border-0">
+          <div class="row g-0 bg-dark">
+
+      <div class="col-md-10 ">
+        <div class="d-flex bg-dark justify-content-end">
+          <a class="text-decoration-none" href="{{products.product.pdf.url}}" dowmload>
+            <button class="btn btn-primary fw-bold">Re-download your PDF</button>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div> 
+{% empty %}
+<div class="alert alert-primary d-flex justify-content-center" role="alert">
+  You Do Not Have Any Bought Items
+</div>
+{% endfor %}
+  
+</main>
+{% endblock %}
