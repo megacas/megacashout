@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'store.context_processors.categories',
                 'store.context_processors.balance',
+                'store.context_processors.invoice',
             ],
         },
     },
