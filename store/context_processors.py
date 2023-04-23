@@ -5,7 +5,8 @@ def categories(request):
         'usa': Category.objects.filter(location=0),   
         'germany': Category.objects.filter(location=1),  
         'australia': Category.objects.filter(location=2),  
-        'pua': Category.objects.filter(location=3),  
+        'pua': Category.objects.filter(location=3),
+        'credit': Category.objects.filter(location=4),
         'categories': Category.objects.filter(location=-1),
         'category': Category.objects.all()
     }

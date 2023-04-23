@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sidebar</title>
+  <title>MegaCashout</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
   <!-- <script src="./tailwind3.js"></script> -->
@@ -221,6 +221,35 @@
             opacity: 0.6;
           }
         </style>
+        <div id="chatbox-2" class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
+          <i class="bi bi-bank"></i>
+          <div class="flex justify-between w-full items-center" onclick="dropDown('submenu-6', 'arrow-6')">
+          <span class="text-[15px] ml-4 text-gray-200">CREDIT UNIONS</span>
+          <span class="text-sm rotate-180" id="arrow-6">
+              <i class="bi bi-chevron-down"></i>
+          </span>
+          </div>
+      </div>
+      <div class=" leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto" id="submenu-6">
+        {% for category in credit %}
+        <a href="{{category.get_absolute_url}}"><div class="p-2">
+          <h1 class="cursor-pointer hover:bg-gray-700 rounded-md mt-1">
+            {{category.name}} +<span class="text-xs text-gray-400 ml-2">{{category.number}} items</span>
+          </h1>
+        </div></a>
+        {% endfor %}
+      </div>
+      
+      <style>
+        #submenu-6 h1:hover {
+          transform: translateX(5px);
+          transition: transform 0.3s ease-in-out;
+        }
+        
+        #submenu-6 span {
+          opacity: 0.6;
+        }
+      </style>
         <!--5th div-->
         <div id="chatbox-2" class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
           <i class="bi bi-person-bounding-box"></i>
@@ -251,7 +280,8 @@
           opacity: 0.6;
         }
       </style>
-  
+      <!--6th div-->
+      
         
           {% for category in categories %}
           <a href="{{category.get_absolute_url}}"><div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
@@ -448,6 +478,7 @@
       dropDown('submenu-3', 'arrow-3');
       dropDown('submenu-4', 'arrow-4');
       dropDown('submenu-5', 'arrow-5');
+      dropDown('submenu-6', 'arrow-6');
       
 
     function Openbar() {
@@ -461,6 +492,19 @@
     <script src="{% static 'js/date.js' %}"></script>
 	<script src="{% static 'js/dashboard.js' %}"></script>
     <script src="{% static 'js/simple-datatables.js' %}"></script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/644483d64247f20fefed34bd/1gulq60fg';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 
 </html>

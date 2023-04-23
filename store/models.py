@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 # Category Model
 class Category(models.Model):
-    STATUS_CHOICES = ((-1,'Main Menu'),(0,'USA Banks'), (1,"Germany Banks"), (2,"Australia Banks"),(3,"Pua and Fullz"))
+    STATUS_CHOICES = ((-1,'Main Menu'),(0,'USA Banks'), (1,"Germany Banks"), (2,"Australia Banks"),(3,"Pua and Fullz"),(4,"Credit Unions"))
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
     location = models.IntegerField(choices=STATUS_CHOICES, default=-1)
@@ -30,10 +30,7 @@ class Product(models.Model):
     price = models.FloatField( blank=True,null=True)
     Status = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(null=True, blank=True, upload_to='images/')
     pdf = models.FileField(null=True, blank=True, upload_to='pdfs/')
-    
-    
     class Meta:
         verbose_name_plural = 'Products'
         ordering = ('created',)
@@ -49,8 +46,5 @@ class Product(models.Model):
             self.slug = f"{self.slug}-{self.pk}"
             self.save()
     
-    def get_absolute_url(self):
-        return reverse('front:product_detail',args=[self.slug])
-
     def __str__(self):
         return self.name
