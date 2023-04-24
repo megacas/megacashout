@@ -77,6 +77,9 @@
                                         <h4 class="">Purchase Completed</h4>
                                         <p>Logs info sent to <span class="fw-semibold">{{request.user.mobile}}</span></p>
                                     </div>
+                                    <a href="{% url 'account:dashboard' %}"><div class="mt-3">
+                                        <button type="button" class="btn btn-success w-100">Purchase History</button>
+                                    </div></a>
                                 </div>
                             </div>
                             <!-- end card body -->

@@ -29,6 +29,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=255)
     price = models.FloatField( blank=True,null=True)
     Status = models.BooleanField(default=True)
+    premium = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     pdf = models.FileField(null=True, blank=True, upload_to='pdfs/')
     class Meta:

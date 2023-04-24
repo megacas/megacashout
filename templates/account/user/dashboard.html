@@ -16,6 +16,7 @@
   </br>
   </div>
   <table class="table table-striped table-bordered border-primary table-responsive mt-12 caption-top">
+    {% if products %}
     <caption class="text-white">Your Items</caption>
     <thead>
       <tr>
@@ -28,10 +29,11 @@
         <th scope="col" class="text-white">Action</th>
       </tr>
     </thead>
+    {% endif %}
     <tbody>
         {% for product in products %}
       <tr>
-        <th scope="row" class="text-white">1</th>
+        <td scope="row" class="text-white">1</td>
         <td class="text-white">${{product.product.Balance}}</td>
         <td class="text-white">{{product.product.Title}}</td>
         <td class="text-white w-50">{{product.product.Info}}</td>
@@ -50,8 +52,20 @@
           </svg><!-- <i class="fas fa-cart-arrow-down"></i> Font Awesome fontawesome.com --></button></td>
         {% endif %}
       </tr>
+      {% empty %}
+<div class="alert alert-primary d-flex justify-content-center mt-12" role="alert">
+  You Do Not Have Any Bought Items
+</div>
       {% endfor %}
     </tbody>
   </table>
+  <script>
+            const firstColumn = document.querySelectorAll('tbody td:first-child');
+            let count = 1;
+            firstColumn.forEach(td => {
+                td.innerText = count;
+                count++;
+            });
+        </script>
 </main>
 {% endblock %}

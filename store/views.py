@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import *
 from payment.models import *
 from django.contrib.auth.decorators import login_required
-#@login_required
+@login_required
 def home(request):
     if request.user.is_authenticated:
         invoice = Invoice.objects.filter(created_by=request.user).first()

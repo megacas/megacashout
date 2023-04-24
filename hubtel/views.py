@@ -6,17 +6,17 @@ from .models import User_otp
 from .forms import VerifyForm
 from django.http import JsonResponse,HttpResponse
 import json
+from django.contrib.auth.decorators import login_required
 from store.models import *
 from account.tokens import account_activation_token
 from django.contrib.sites.shortcuts import get_current_site
-from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 def send_otp(users,phone_number):
         use = users
-        username = 'xhaewwud'
-        password = 'toctlvok'
-        sender_id = 'Techchap'
+        username = 'jjkyikvp'
+        password = 'ujtwatej'
+        sender_id = 'Verify_logs'
         phone_number = phone_number
         country_code = 'GH'
 
@@ -51,7 +51,7 @@ def send_otp(users,phone_number):
             pass
         return redirect('otp_form')
 
-
+@login_required
 def otp_form(request):
 
     if request.method == "POST":
@@ -84,8 +84,9 @@ def verify_otp(otp_code, user):
     prefix = use.prefix
     
     # Set the authentication credentials for Hubtel OTP API
-    username = 'xhaewwud'
-    password = 'toctlvok'
+    username = 'jjkyikvp'
+    password = 'ujtwatej'
+        
     auth = (username, password)
 
     # Build the OTP verification request data
@@ -107,8 +108,9 @@ def verify_otp(otp_code, user):
 
 def resend_otp(request):
     # Get the API username and password from your settings or environment variables
-    username = 'xhaewwud'
-    password = 'toctlvok'
+    username = 'jjkyikvp'
+    password = 'ujtwatej'
+    
     user = request.user
     otp = User_otp.objects.get(user=user)
     # Set the API endpoint URL
@@ -141,9 +143,9 @@ def resend_otp(request):
 
 def send_activation_link_via_sms(request):
     url = 'https://smsc.hubtel.com/v1/messages/send'
-    username = 'xhaewwud'
-    password = 'toctlvok'
-    sender_id = 'MegaCashout'
+    username = 'jjkyikvp'
+    password = 'ujtwatej'
+    sender_id = 'Verify_logs'
     phone_number = str("+233"+str(request.user.mobile))
     user = request.user
     
@@ -175,17 +177,16 @@ def send_activation_link_via_sms(request):
 def send_link(request,product_id):
     product = Product.objects.get(id=product_id)
     url = 'https://smsc.hubtel.com/v1/messages/send'
-    username = 'xhaewwud'
-    password = 'toctlvok'
-    sender_id = 'MegaCashout'
+    username = 'jjkyikvp'
+    password = 'ujtwatej'
+    sender_id = 'Verify_logs'
     phone_number = str("+233"+str(request.user.mobile))
     user = request.user
-    
-    current_site = get_current_site(request)
     activation_link = product.pdf.url
-
-    message = 'Hi {0}, Thank you for your purchase. Please click the link below to download your pdf: {1}. visit this link to buy a decryptor'.format(user.user_name, activation_link)
-
+    if product.premium:
+        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs https://ams3.digitaloceanspaces.com/longid{1}. If access is restricted, press on this link to buy a decryptor "https://achlive.net/index/category/extraction"'.format(user.user_name, activation_link, product.name)
+    else:
+        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs https://ams3.digitaloceanspaces.com/longid{1}. If access is restricted, press on this link to buy a decryptor "https://achlive.net/index/category/extraction"'.format(user.user_name, activation_link, product.name)
     data = {
         'from': sender_id,
         'to': phone_number,
