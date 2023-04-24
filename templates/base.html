@@ -42,33 +42,8 @@
   <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="Openbar()">
     <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
   </span>
-  <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-10000 p-2 w-[300px] overflow-y-scroll h-100vh text-center bg-gray-700 shadow" id="sidebar">
-    <script>
-      const sidebar = document.querySelector('.sidebar');
-    
-      function hideScrollbar(element) {
-        element.classList.add('hide-scrollbar');
-      }
-    
-      function showScrollbar(element) {
-        element.classList.remove('hide-scrollbar');
-      }
-    
-      hideScrollbar(sidebar);
-    
-      window.addEventListener('wheel', function() {
-        const distanceFromTop = sidebar.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        console.log('distanceFromTop:', distanceFromTop);
-        if (distanceFromTop > 10) {
-          console.log("fired")
-          showScrollbar(sidebar);
-        } else {
-          hideScrollbar(sidebar);
-        }
-      });
-    </script>
-    
-    <div class="text-gray-100 text-xl">
+  <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-10000 p-2 w-[300px] overflow-y-scroll text-center bg-gray-700 shadow" id="sidebar">    
+    <div class="text-gray-100 text-xl" id="content">
       <div class="p-2.5 mt-1 flex items-center rounded-md ">
         <i class="bi bi-app-indicator px-2 py-1 bg-blue-600 rounded-md"></i>
         <h1 class="text-[15px]  ml-3 text-xl text-gray-200 font-bold">MegaCashout</h1>
@@ -304,6 +279,27 @@
 
       </div>
     </div>
+    <script>
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarContent = document.getElementById('content');
+  
+      function hideScrollbar(element) {
+        element.classList.add('hide-scrollbar');
+      }
+  
+      function showScrollbar(element) {
+        element.classList.remove('hide-scrollbar');
+      }
+  
+      hideScrollbar(sidebar);
+  
+      sidebarContent.addEventListener('wheel', function() {
+        showScrollbar(sidebar);
+        
+        
+      });
+      setTimeout(hideScrollbar(sidebar),3000);
+      </script>
   </div>
   <!-- Add a div here to wrap the content with a margin -->
   <div id="content-wrapper">
@@ -485,13 +481,7 @@
       document.querySelector('.sidebar').classList.toggle('left-[-300px]')
     }
   </script>
-  <script src="{% static 'js/perfect-scrollbar.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/vendor.js' %}"></script>
-    
-    <script src="{% static 'js/date.js' %}"></script>
-	<script src="{% static 'js/dashboard.js' %}"></script>
-    <script src="{% static 'js/simple-datatables.js' %}"></script>
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
