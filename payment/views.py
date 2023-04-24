@@ -32,6 +32,8 @@ def track_invoice(request, pk):
         data['paid'] =  invoice.received/1e8
         if (int(invoice.btcvalue) <= int(invoice.received)):
             send_link(request,product_id=invoice.product.id)
+            invoice.product.Status = False
+            invoice.product.save()
             return render(request, 'account/registration/buy_email_confirm.html')
     else:
         data['paid'] = 0  
@@ -187,10 +189,12 @@ def buy(request,pk):
                 balance.balance = b - price
                 balance.save()
                 
-                invoice = Invoice.objects.create(order_id=balance.order_id,
+                invoice = Invoice.objects.create(status=2,order_id=balance.order_id,
                                 address=balance.address,btcvalue=balance.btcvalue, product=product, 
                                 created_by=request.user,sold=True,received=balance.received)
                 send_link(request,product_id=product_id)
+                product.Status = False
+                product.save()
                 return render(request, 'account/registration/buy_email_confirm.html')
         else:
             return redirect("payment:create_balance")
