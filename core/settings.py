@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = ["*"]
 
-
+API_KEY = "f2qchMQe1X3MaEaGNyK5qr1p1vJRCzetaXZ7gylpVS0"
 # Application definition
 
 INSTALLED_APPS = [
