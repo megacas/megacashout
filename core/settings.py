@@ -61,6 +61,7 @@ TEMPLATES = [
                 'store.context_processors.categories',
                 'store.context_processors.balance',
                 'store.context_processors.invoice',
+                'store.context_processors.random_name',
             ],
         },
     },

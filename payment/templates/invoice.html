@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>MegaCash</title>
    </head>
-   <body style="background-color:blue;">
+   <body style="background-color:rgb(13, 12, 45);">
       <div class="card" style="background-color:rgb(13, 12, 45);">
           <div class="card-header" style="background-color: rgb(13, 12, 45); text-align: center;">
-            <h3 style="color: white;">BITCOIN PAYMENT PAGE</h3>
+            <h3 style="color: white;">MegaCashout Payment Page</h3>
             <img src="https://achlogs.world/assets/images/logotop.svg" height="22" width="94">
         </div>
-        <button onClick="showPopup()" type="button" class="btn btn-danger hove" data-toggle="modal" data-target="#exampleModalLong">
+        <button onClick="showPopup()" type="button" class="btn btn-success hove" data-toggle="modal" data-target="#exampleModalLong">
             How to purchase Bank Logs?
         </button>
         <div class="wrapper" style="background-color: rgb(13, 12, 45);">
@@ -29,12 +29,12 @@
                     </a>
                 </div>
                 <div class="card-header text-center" style="background-color: rgb(13, 12, 45);">
-                    <input type="text" value="{{addr}}" id="myInput">
-                    <a onclick="copyText()" class="btn btn-success" href="#" role="button">
+                    <input type="text" value="{{addr}}" id="myInput" style="border-radius:8px;padding-left:3px;padding-top:3px;padding-right:3px;border:none;">
+                    <a onclick="copyText()" class="btn btn-success" href="#" role="button" >
                         COPY
                         <i class="fas fa-copy"></i>
                     </a>
-                    <br>
+                </br>
                     {% if request.user.balance_set.exists %}
                     <h5 style="color: white;">
                         Page will automatically refresh until payment is completed. Kindly do not close this page.
@@ -71,9 +71,9 @@
                     <div class="modal-body">
                         <p>Step 1: Deposit the price of the log you want to purchase.</p>
                         <p>Step 2: Choose the log you want to purchase and click Buy.</p>
-                        <p>Step 3: Enter the email address to which your logs will be sent.</p>
+                        <p>Step 3: Your Phone Number will be automatically set, to which your logs will be sent.</p>
                         <p>Step 4: An alert will appear, choose option use your available Balance.</p>
-                        <p>Step 5: Wait for 1-5 mins for your logs to be sent to your email address.</p>
+                        <p>Step 5: Wait for 1-5 mins for your logs to be sent to your SMS.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" onClick="closeFunc()" class="btn btn-secondary" id="Close" data-dismiss="modal">Close</button>
@@ -113,6 +113,9 @@
         .btc{
             display: flex;
             justify-content: center;
+        }
+        .btc img{
+            border-radius: 10px;
         }
 
         .card
