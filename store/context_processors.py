@@ -43,30 +43,14 @@ import time
 import random
 
 def random_name(request):
-    names = ['John', 'Jane', 'Mike', 'Sarah', 'David']
-    bank_names = ['Bank of America', 'Chase', 'Wells Fargo', 'Citibank', 'US Bank']
-    name1 = random.choice(names)
-    bank_name1 = random.choice(bank_names)
-    name2 = random.choice(names)
-    bank_name2 = random.choice(bank_names)
-    name3 = random.choice(names)
-    bank_name3 = random.choice(bank_names)
-    name4 = random.choice(names)
-    bank_name4 = random.choice(bank_names)
-    name5 = random.choice(names)
-    bank_name5 = random.choice(bank_names)
+    names = ['Kolaskov','Mclean', 'Trevor', 'Rexxy', 'Sarah', 'David', 'Draven', 'Raven', 'Malachi', 'Lilith', 'Azazel', 'Morgana', 'Damien', 'Bellatrix', 'Lucius', 'Luna', 'Salem', 'Morticia', 'Vladimir', 'Selene', 'Spike','Devon']
+    bank_names = ['Bank of America', 'Chase', 'Wells Fargo', 'Citibank', 'US Bank', 'HSBC', 'Barclays', 'TD Bank', 'PNC Bank', 'Capital One', 'SunTrust', 'BB&T Bank', 'Santander Bank', 'Regions Bank', 'Fifth Third Bank', 'KeyBank', 'Ally Bank']
+    name = random.choice(names)
+    bank_name = random.choice(bank_names)
+    
     data = {
-        'human_name': name1,
-        'bank_name': bank_name1,
-        'human_name1': name2,
-        'bank_name1': bank_name2,
-        'human_name2': name3,
-        'bank_name2': bank_name3,
-        'human_name3': name4,
-        'bank_name3': bank_name4,
-        'human_name4': name5,
-        'bank_name4': bank_name5,
-        
+        'human_name': name,
+        'bank_name': bank_name,
     }
     
     return data

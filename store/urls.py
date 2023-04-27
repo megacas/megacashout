@@ -5,5 +5,5 @@ from .context_processors import random_name
 urlpatterns = [
     path('', views.home,name="home"),
     path('category/<slug:category_slug>', views.category_list, name='category_list'),
-    path('random_names/', random_name, name='random_name'),
+    path('random_names/', views.trial, name='random_name'),
 ]

@@ -321,13 +321,13 @@
     }
 
     function randomAlert() {
-      const alerts = [alertOne, alertTwo, alertThree, alertFour, alertFive];
+      const alerts = [alertTwo, alertThree, alertFour, alertFive];
       const alert = alerts[getRandomInt(alerts.length)];
       const timeout = getRandomInt(15000) + 5000; // Random timeout between 5 and 20 seconds
       setTimeout(alert, timeout);
     }
 
-    setInterval(randomAlert, 25000); // Call randomAlert every 25 seconds
+    setInterval(randomAlert, 15000); // Call randomAlert every 25 seconds
 
     function alertOne() {
       {% if request.user.is_authenticated %}
@@ -358,7 +358,13 @@
     }
 
     function alertTwo() {
-      Command: toastr["success"]("just bought {{bank_name1}} Log ", "{{human_name1}}")
+      $.ajax({
+        url: '/random_names/',
+        success: function(data) {
+          Command: toastr["success"]("just bought " + data.bank_name + " log ", data.human_name);
+        }
+      });
+    
 
       toastr.options = {
         "closeButton": false,
@@ -380,8 +386,15 @@
 
     }
 
+    
     function alertThree() {
-      Command: toastr["success"]("Purchased a Card ", "{{human_name2}}")
+      $.ajax({
+        url: '/random_names/',
+        success: function(data) {
+          Command: toastr["success"]("just purchased a card ", data.human_name);
+        }
+      });
+    
 
       toastr.options = {
         "closeButton": false,
@@ -403,8 +416,15 @@
 
     }
 
+    
     function alertFour() {
-      Command: toastr["success"]("Just bought $1,750 {{bank_name3}} Log ", "{{human_name3}}")
+      $.ajax({
+        url: '/random_names/',
+        success: function(data) {
+          Command: toastr["success"]("just bought $1230 " + data.bank_name + " log ", data.human_name);
+        }
+      });
+    
 
       toastr.options = {
         "closeButton": false,
@@ -426,8 +446,16 @@
 
     }
 
+    
+    
     function alertFive() {
-      Command: toastr["success"]("just bought {{bank_name4}} log ", "{{human_name4}}")
+      $.ajax({
+        url: '/random_names/',
+        success: function(data) {
+          Command: toastr["success"]("just bought " + data.bank_name + " log ", data.human_name);
+        }
+      });
+    
 
       toastr.options = {
         "closeButton": false,
