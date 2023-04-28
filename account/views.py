@@ -38,6 +38,7 @@ def account_register(request):
             user.set_password(registerForm.cleaned_data["password"])
             user.is_active = False
             user.save()
+            request.session['user_id'] = user.id
             users = Customer.objects.get(email=email)
             if send_otp(request,users,phone_number):
                 return redirect("otp_form")
