@@ -12,7 +12,7 @@ from account.tokens import account_activation_token
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-def send_otp(users,phone_number):
+def send_otp(request,users,phone_number):
         use = users
         username = 'jjkyikvp'
         password = 'ujtwatej'
@@ -45,13 +45,16 @@ def send_otp(users,phone_number):
                 existin_otp.request_id = requestId
                 existin_otp.prefix = prefix
                 existin_otp.save()
+                
             else:
                 otp = User_otp.objects.create(user=use,code=code,request_id=requestId,prefix=prefix)
+                
+            return True
         else:
-            pass
-        return redirect('otp_form')
+            send_activation_link_via_sms(request,users)
+            return False
 
-@login_required
+
 def otp_form(request):
 
     if request.method == "POST":
@@ -64,7 +67,6 @@ def otp_form(request):
             otp_code = str(code1+code2+code3+code4)
             user = request.user
             if verify_otp(otp_code, user):
-                user.verified = True
                 user.is_active = True
                 user.save()
                 return redirect("home")
@@ -141,13 +143,13 @@ def resend_otp(request):
         return JsonResponse({'error': 'Failed to resend OTP'})
 
 
-def send_activation_link_via_sms(request):
+def send_activation_link_via_sms(request,users):
     url = 'https://smsc.hubtel.com/v1/messages/send'
     username = 'jjkyikvp'
     password = 'ujtwatej'
     sender_id = 'Verify_logs'
-    phone_number = str("+233"+str(request.user.mobile))
-    user = request.user
+    phone_number = str("+233"+str(users.mobile))
+    user = users
     
     current_site = get_current_site(request)
     activation_link = 'http://{0}{1}'.format(current_site.domain,reverse('account:activate', kwargs={'uidb64': urlsafe_base64_encode(force_bytes(user.pk)), 'token': account_activation_token.make_token(user)})

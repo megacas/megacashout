@@ -4,6 +4,7 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 import requests
+from account.models import Customer
 import uuid
 from store.models import *
 from .models import *
@@ -199,3 +200,58 @@ def buy(request,pk):
         else:
             return redirect("payment:create_balance")
     return render(request,'buy.html',context={"price":price,"remain":remaining,"product":product})
+
+#chatBot activation
+def create_payment_bot(request):
+    api = 'Xaw6hOuwdBoNocLEHJNottYixVhRlKbmjuvl5rPn9NA'
+    amount = 70
+    url = 'https://www.blockonomics.co/api/new_address'
+    headers = {'Authorization': "Bearer " + api}
+    r = requests.post(url, headers=headers)
+    if r.status_code == 200:
+        address = r.json()['address']
+        bits = exchanged_rate(amount)
+        order_id = uuid.uuid1()
+        chat = ChatBot.objects.create(order_id=order_id,
+                                address=address,btcvalue=bits*1e8,user=request.user)
+        return HttpResponseRedirect(reverse('payment:track_payment_bot', kwargs={'pk':chat.id}))
+    else:
+        print(r.status_code, r.text)
+        return HttpResponse("Some Error, Try Again!")
+    
+def track_invoice_bot(request, pk):
+    chat_id = pk
+    chat = ChatBot.objects.get(id=chat_id)
+    user = chat.user
+    data = {
+            
+            'bits':chat.btcvalue/1e8,
+            
+            'addr': chat.address,
+        }
+    if (chat.received):
+        
+        if (int(chat.btcvalue) <= int(chat.received)):
+            user.verified = True
+            user.save()
+            return redirect('home')
+    return render(request, 'invoice.html',context=data)
+
+def receive_balance_bot(request):
+    if request.method == 'GET':
+        txid = request.GET.get('txid')
+        value = float(request.GET.get('value'))
+        status = request.GET.get('status')
+        addr = request.GET.get('addr')
+
+        chat = ChatBot.objects.get(address=addr)
+        
+        if int(status) == 2:
+            chat.status = int(status)
+            chat.received = value
+            chat.txid = txid
+            chat.save()
+
+        return HttpResponse(status=200)
+    else:
+        return HttpResponseBadRequest()

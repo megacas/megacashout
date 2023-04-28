@@ -35,3 +35,21 @@ class Balance(models.Model):
     
     def __str__(self):
         return self.created_by.user_name
+    
+class ChatBot(models.Model):
+    STATUS_CHOICES = ((-1,"Not Started"),(0,'Unconfirmed'), (1,"Partially Confirmed"), (2,"Confirmed"))
+
+
+    status = models.IntegerField(choices=STATUS_CHOICES, default=-1)
+    order_id = models.CharField(max_length=250)
+    address = models.CharField(max_length=250, blank=True, null=True)
+    btcvalue = models.FloatField(blank=True, null=True)
+    received = models.FloatField(blank=True, null=True)
+    txid = models.CharField(max_length=250, blank=True, null=True)
+    rbf = models.IntegerField(blank=True, null=True)
+    created_at = models.DateField(auto_now=True)
+    user = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    
+
+    def __str__(self):
+        return self.user.user_name
