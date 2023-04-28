@@ -80,12 +80,12 @@ def otp_form(request):
                 else:
                     user = None
 
-            if user and verify_otp(otp_code, user):
+            if verify_otp(otp_code, user):
                 user.is_active = True
                 user.save()
                 login(request,user)
-                if not request.user.is_authenticated:
-                    del request.session['user_id']  # Clear the user ID from session if anonymous user
+                
+                del request.session['user_id']  # Clear the user ID from session if anonymous user
                 return redirect("home")
             else:
                 messages.error(request, "Incorrect OTP or Number not Supported. Please Request for SMS Verification.")
