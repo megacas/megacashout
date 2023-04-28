@@ -6,6 +6,8 @@ from .models import User_otp
 from .forms import VerifyForm
 from django.http import JsonResponse,HttpResponse
 import json
+from django.contrib.auth import login
+from account.models import *
 from django.contrib.auth.decorators import login_required
 from store.models import *
 from account.tokens import account_activation_token
@@ -56,7 +58,6 @@ def send_otp(request,users,phone_number):
 
 
 def otp_form(request):
-
     if request.method == "POST":
         form = VerifyForm(request.POST)
         if form.is_valid():
@@ -65,10 +66,26 @@ def otp_form(request):
             code3 = str(form.cleaned_data['code3'])
             code4 = str(form.cleaned_data['code4'])
             otp_code = str(code1+code2+code3+code4)
-            user = request.user
-            if verify_otp(otp_code, user):
+
+            # Check if user is logged in
+            if request.user.is_authenticated:
+                user = request.user
+            else:
+                user_id = request.session.get('user_id')  # Retrieve user ID from session
+                if user_id:
+                    try:
+                        user = Customer.objects.get(id=user_id)
+                    except Customer.DoesNotExist:
+                        user = None
+                else:
+                    user = None
+
+            if user and verify_otp(otp_code, user):
                 user.is_active = True
                 user.save()
+                login(request,user)
+                if not request.user.is_authenticated:
+                    del request.session['user_id']  # Clear the user ID from session if anonymous user
                 return redirect("home")
             else:
                 messages.error(request, "Incorrect OTP or Number not Supported. Please Request for SMS Verification.")
@@ -76,6 +93,7 @@ def otp_form(request):
     else:
         form = VerifyForm()
     return render(request, "verify.html", {"form": form})
+
 
 
 def verify_otp(otp_code, user):
@@ -171,10 +189,10 @@ def send_activation_link_via_sms(request,users):
 
     if response.status_code == 201:
         # handle success
-        return render(request, 'account/registration/register_email_confirm.html')
+        return True
     else:
         # handle error
-        return HttpResponse("Something went wrong")
+        return False
 
 def send_link(request,product_id):
     product = Product.objects.get(id=product_id)
