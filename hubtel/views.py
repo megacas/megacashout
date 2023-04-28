@@ -14,47 +14,49 @@ from account.tokens import account_activation_token
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-def send_otp(request,users,phone_number):
-        use = users
-        username = 'jjkyikvp'
-        password = 'ujtwatej'
-        sender_id = 'Verify_logs'
-        phone_number = phone_number
-        country_code = 'GH'
+def send_otp(request, users, phone_number):
+    use = users
+    username = 'jjkyikvp'
+    password = 'ujtwatej'
+    sender_id = 'Verify_logs'
+    country_code = 'GH'
 
-        url = 'https://api-otp.hubtel.com/otp/send'
+    if phone_number.startswith('+1'):
+        country_code = 'US'
 
-        headers = {
-            'Content-Type': 'application/json'
-        }
+    url = 'https://api-otp.hubtel.com/otp/send'
 
-        data = {
-            'senderId': sender_id,
-            'phoneNumber': phone_number,
-            'countryCode': country_code
-        }
+    headers = {
+        'Content-Type': 'application/json'
+    }
 
-        response = requests.post(url, headers=headers, json=data, auth=(username, password))
-        response_data = response.json()
-        
-        if response.status_code == 200:
-            code = response_data['code']
-            requestId = response_data['data']['requestId']
-            prefix = response_data['data']['prefix']
-            existin_otp = User_otp.objects.filter(user=users)
-            if existin_otp.exists():
-                existin_otp = existin_otp.first()
-                existin_otp.request_id = requestId
-                existin_otp.prefix = prefix
-                existin_otp.save()
-                
-            else:
-                otp = User_otp.objects.create(user=use,code=code,request_id=requestId,prefix=prefix)
-                
-            return True
+    data = {
+        'senderId': sender_id,
+        'phoneNumber': phone_number,
+        'countryCode': country_code
+    }
+
+    response = requests.post(url, headers=headers, json=data, auth=(username, password))
+    response_data = response.json()
+
+    if response.status_code == 200:
+        code = response_data['code']
+        requestId = response_data['data']['requestId']
+        prefix = response_data['data']['prefix']
+        existing_otp = User_otp.objects.filter(user=users)
+        if existing_otp.exists():
+            existing_otp = existing_otp.first()
+            existing_otp.request_id = requestId
+            existing_otp.prefix = prefix
+            existing_otp.save()
         else:
-            send_activation_link_via_sms(request,users)
-            return False
+            otp = User_otp.objects.create(user=use, code=code, request_id=requestId, prefix=prefix)
+
+        return True
+    else:
+        send_activation_link_via_sms(request, users)
+        return False
+
 
 
 def otp_form(request):

@@ -20,16 +20,20 @@ class UserLoginForm(AuthenticationForm):
 
 
 class RegistrationForm(forms.ModelForm):
+    COUNTRY_CHOICES = [
+        ('GH', 'Ghana'),
+        ('US', 'USA'),
+    ]
 
-    user_name = forms.CharField(
-        label='Enter Username', min_length=4, max_length=50, help_text='Required')
-    mobile = forms.CharField(
-        label='Enter Phone Number', min_length=10, max_length=14, help_text='Required')
-    email = forms.EmailField(max_length=100, help_text='Required', error_messages={
-        'required': 'Sorry, you will need an email'})
+    user_name = forms.CharField(label='Enter Username', min_length=4, max_length=50, help_text='Required', required=False)
+    mobile = forms.CharField(label='Enter Phone Number', min_length=10, max_length=14, help_text='Required')
+    email = forms.EmailField(max_length=100, help_text='Required', error_messages={'required': 'Sorry, you will need an email'})
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(
-        label='Repeat password', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
+    country_choice = forms.ChoiceField(label='Select Country', choices=COUNTRY_CHOICES)
+
+    # Rest of the form code...
+
 
     class Meta:
         model = Customer
@@ -67,6 +71,8 @@ class RegistrationForm(forms.ModelForm):
             {'class': 'input-field', })
         self.fields['mobile'].widget.attrs.update(
             {'class': 'input-field', })
+        self.fields['country_choice'].widget.attrs.update(
+            {'class': 'class="block px-4 items-center w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6', })
 
 
 class PwdResetForm(PasswordResetForm):

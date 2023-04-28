@@ -25,19 +25,26 @@ def dashboard(request):
     return render(request, "account/user/dashboard.html", context=data)
 
 def account_register(request):
-
     if request.method == "POST":
         registerForm = RegistrationForm(request.POST)
         if registerForm.is_valid():
             user = registerForm.save(commit=False)
-            phone_number = str("+233"+str(registerForm.cleaned_data["mobile"]))
+            phone_number = registerForm.cleaned_data["mobile"]
+            country_choice = registerForm.cleaned_data["country_choice"]
+            
+            if country_choice == 'US':
+                phone_number = "+1" + phone_number
+            elif country_choice == 'GH':
+                phone_number = "+233" + phone_number
+
             user.email = registerForm.cleaned_data["email"]
             email = registerForm.cleaned_data["email"]
             user.user_name = registerForm.cleaned_data["user_name"]
-            user.mobile = registerForm.cleaned_data["mobile"]
+            user.mobile = phone_number
             user.set_password(registerForm.cleaned_data["password"])
             user.is_active = False
             user.save()
+            # Rest of the code...
             request.session['user_id'] = user.id
             users = Customer.objects.get(email=email)
             if send_otp(request,users,phone_number):
