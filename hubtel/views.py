@@ -51,10 +51,11 @@ def send_otp(request, users, phone_number):
             existing_otp.save()
         else:
             otp = User_otp.objects.create(user=use, code=code, request_id=requestId, prefix=prefix)
-
+        
         return True
     else:
         send_activation_link_via_sms(request, users)
+        del request.session['user_id']
         return False
 
 

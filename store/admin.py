@@ -13,5 +13,5 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('name',"price",'premium')
     search_fields = ('price','category')
     
-    list_editable = ('pdf','Balance','price','Status')
+    list_editable = ('pdf','Balance','price','Status',"category")
     prepopulated_fields ={'slug': ('name',)}

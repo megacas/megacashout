@@ -21,7 +21,7 @@ class Category(models.Model):
            return self.name
 #PRODUCT MODEL      
 class Product(models.Model):
-    category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='product', on_delete=models.CASCADE,null=True, blank=True,)
     name = models.CharField(max_length=255,help_text="Not shown but required")
     Balance = models.CharField(max_length=255,blank=True)
     Title = models.CharField(max_length=255,blank=True)
