@@ -207,9 +207,9 @@ def send_link(request,product_id):
     user = request.user
     activation_link = product.pdf.url
     if product.premium:
-        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs https://ams3.digitaloceanspaces.com/longid{1}. If access is restricted, press on this link to buy a decryptor "https://achlive.net/index/category/extraction"'.format(user.user_name, activation_link, product.name)
+        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs {1}. If access is restricted, press on this link to buy a decryptor "https://megacashouts.store/category/extraction"'.format(user.user_name, activation_link, product.name)
     else:
-        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs https://ams3.digitaloceanspaces.com/longid{1}. If access is restricted, press on this link to buy a decryptor "https://achlive.net/index/category/extraction"'.format(user.user_name, activation_link, product.name)
+        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs {1}. If access is restricted, press on this link to buy a decryptor "https://megacashouts.store/category/extraction"'.format(user.user_name, activation_link, product.name)
     data = {
         'from': sender_id,
         'to': phone_number,
