@@ -1,15 +1,9 @@
-from django.contrib import messages
-from django.contrib.auth import login, logout
+from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
-from django.contrib.sites.shortcuts import get_current_site
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, redirect, render
-from django.template.loader import render_to_string
-from django.utils.encoding import force_bytes, force_str
-from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-from store.models import Product
-#from order.models import Order
-from .forms import RegistrationForm,  UserEditForm
+from django.shortcuts import redirect, render
+from django.utils.encoding import  force_str
+from django.utils.http import urlsafe_base64_decode
+from .forms import RegistrationForm
 from .models import  Customer
 from .tokens import account_activation_token
 from hubtel.views import send_otp
@@ -34,13 +28,23 @@ def account_register(request):
             
             if country_choice == 'US':
                 phone_number = "+1" + phone_number
+                user.mobile = "+1" + phone_number
             elif country_choice == 'GH':
                 phone_number = "+233" + phone_number
+                user.mobile = "+233" + phone_number
+            elif country_choice == 'CA':
+                phone_number = "+1" + phone_number
+                user.mobile = "+1" + phone_number
+            if country_choice == 'DE':
+                phone_number = "+49" + phone_number
+                user.mobile = "+49" + phone_number
+            if country_choice == 'AU':
+                phone_number = "+61" + phone_number
+                user.mobile = "+61" + phone_number
 
             user.email = registerForm.cleaned_data["email"]
             email = registerForm.cleaned_data["email"]
             user.user_name = registerForm.cleaned_data["user_name"]
-            user.mobile = phone_number
             user.set_password(registerForm.cleaned_data["password"])
             user.is_active = False
             user.save()

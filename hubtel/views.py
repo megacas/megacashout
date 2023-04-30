@@ -23,7 +23,10 @@ def send_otp(request, users, phone_number):
 
     if phone_number.startswith('+1'):
         country_code = 'US'
-
+    elif phone_number.startswith('+49'):
+        country_code = 'DE'
+    elif phone_number.startswith('+61'):
+        country_code = 'AU'
     url = 'https://api-otp.hubtel.com/otp/send'
 
     headers = {
@@ -169,7 +172,7 @@ def send_activation_link_via_sms(request,users):
     username = 'jjkyikvp'
     password = 'ujtwatej'
     sender_id = 'Verify_logs'
-    phone_number = str("+233"+str(users.mobile))
+    phone_number = str(users.mobile)
     user = users
     
     current_site = get_current_site(request)
@@ -203,7 +206,7 @@ def send_link(request,product_id):
     username = 'jjkyikvp'
     password = 'ujtwatej'
     sender_id = 'Verify_logs'
-    phone_number = str("+233"+str(request.user.mobile))
+    phone_number = str(request.user.mobile)
     user = request.user
     activation_link = product.pdf.url
     if product.premium:

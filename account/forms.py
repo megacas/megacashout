@@ -23,6 +23,9 @@ class RegistrationForm(forms.ModelForm):
     COUNTRY_CHOICES = [
         ('GH', 'Ghana'),
         ('US', 'USA'),
+        ('CA', 'Canada'),
+        ('DE', 'Germany'),
+        ('AU', 'Australia'),
     ]
 
     user_name = forms.CharField(label='Enter Username', min_length=4, max_length=50, help_text='Required', required=False)
