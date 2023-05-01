@@ -4,7 +4,19 @@
 <table class="table table-striped table-bordered border-danger table-responsive mt-12 caption-top">
   {% if products %}
     <caption class="text-white">{{category.name}}</caption>
-    
+    {% if cards %}
+    <thead>
+      <tr>
+        <th scope="col" class="text-white">Type</th>
+        <th scope="col" class="text-white">Bin</th>
+        <th scope="col" class="text-white">Title</th>
+        <th scope="col" class="text-white">Info</th>
+        <th scope="col" class="text-white">Price</th>
+        <th scope="col" class="text-white">Status</th>
+        <th scope="col" class="text-white">Action</th>
+      </tr>
+    </thead>
+    {% else %}
     <thead>
       <tr>
         <th scope="col" class="text-white">#</th>
@@ -17,11 +29,12 @@
       </tr>
     </thead>
     {% endif %}
+    {% endif %}
     <tbody>
         {% for product in products %}
       <tr>
-        <td scope="row" class="text-white">1</td>
-        <td class="text-white">${{product.Balance}}</td>
+        <td scope="row" class="text-white">{% if cards %}{{product.name}}{% else %}1{% endif %}</td>
+        <td class="text-white">{% if cards %}{{product.Balance}}{% else %}${{product.Balance}}{% endif %}</td>
         <td class="text-white">{{product.Title}}</td>
         <td class="text-white w-50">{{product.Info}}</td>
         <td class="text-white">${{product.price}}</td>

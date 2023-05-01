@@ -1,965 +1,141 @@
 name,category,Balance,price,Title,Info,slug,pdf
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-MIDFLORIDA Credit Union,Wells Fargo,47195.97,470,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w856,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,64954.71,640,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w857,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,45972.04,450,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w858,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,26638.37,260,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w859,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,83578.16,830,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w860,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,50967.05,500,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w861,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,61490.89,610,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w862,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,14487.13,140,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w863,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,88226.26,880,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w864,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,53519.43,530,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w865,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,81883.88,810,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w866,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,47357.52,470,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w867,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,70132.89,700,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w868,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,84154.23,840,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w869,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,25936.13,250,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w870,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,53453.96,530,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w871,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,35108.33,350,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w872,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,39967.39,390,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w873,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,67639.39,670,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w874,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,69320.64,690,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w875,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,48486.35,480,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w876,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,12592.8,120,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w877,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,28917.65,280,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w878,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,57473.62,570,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w879,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,87655.28,870,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w880,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,44564.55,440,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w881,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,34134.76,340,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w882,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,55091.6,550,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w883,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,47731.45,470,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w884,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,17703.79,170,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w885,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,15042.1,150,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w886,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,89188.29,890,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w887,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,82596.85,820,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w888,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,68365.28,680,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w889,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,74315.04,740,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w890,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,24145.49,240,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w891,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,87424.07,870,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w892,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,24683.23,240,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w893,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,67739.63,670,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w894,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,49439.98,490,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w895,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,35434.25,350,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w896,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,14974.39,140,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w897,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,72462.68,720,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w898,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,44883.13,440,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w899,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,31291.55,310,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w900,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,77539.05,770,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w901,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,63140.11,630,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w902,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,89088.44,890,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w903,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,84243.93,840,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w904,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,26124.12,260,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w905,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,30033.22,300,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w906,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,38428.16,380,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w907,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,28985.79,280,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w908,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,66731.64,660,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w909,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,89581.35,890,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w910,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,29723.38,290,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w911,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,24025.17,240,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w912,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,71462.75,710,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w913,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,68495.25,680,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w914,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,76205.99,760,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w915,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,61993.87,610,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w916,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,22674.78,220,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w917,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,19571.83,190,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w918,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,90353.69,900,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w919,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,35829.58,350,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w920,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,67708.25,670,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w921,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,50708.98,500,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w922,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,46759.21,460,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w923,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,41999.22,410,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w924,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,59582.18,590,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w925,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,71764.37,710,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w926,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,50814.53,500,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w927,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,53465.31,530,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w928,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,59078.12,590,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w929,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,13177.21,130,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w930,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,75181.75,750,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w931,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,36881.21,360,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w932,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,50610.98,500,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w933,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,47281.62,470,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w934,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,80592.23,800,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w935,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,23164.03,230,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w936,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,82359.02,820,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w937,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,52256.36,520,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w938,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,47726.44,470,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w939,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,90252.57,900,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w940,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,92794.78,920,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w941,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,28615.28,280,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w942,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,20664.81,200,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w943,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,61903,610,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w944,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,13600.19,130,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w945,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,93054.93,930,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w946,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,43723.93,430,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w947,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,92159.55,920,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w948,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,76088.71,760,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w949,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,57161.99,570,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w950,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,61479.32,610,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w951,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,69352.86,690,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w952,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,38398.75,380,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w953,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,93371.29,930,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w954,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,26447.52,260,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w955,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,28587.77,280,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w956,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,47084.55,470,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w957,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,60770.72,600,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w958,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,44589.69,440,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w959,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,16883.44,160,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w960,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,38403.09,380,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w961,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,37904.53,370,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w962,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,73871.96,730,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w963,static/last.pdf
-MIDFLORIDA Credit Union,Wells Fargo,42883.75,420,CHECKING ACCOUNT & SAVINGS ACCOUNT,(Online access)+(Account/Routine Number)+(Name And Address)+(Email access)+(Personal Questions),w964,static/last.pdf
+Debit Card[Mastercard],Cards,55074,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w1,static/cards.pdf
+Debit Card[Mastercard],Cards,55141,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w2,static/cards.pdf
+Debit Card[Mastercard],Cards,55179,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w3,static/cards.pdf
+Debit Card[Mastercard],Cards,55215,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w4,static/cards.pdf
+Debit Card[Mastercard],Cards,55254,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w5,static/cards.pdf
+Debit Card[Mastercard],Cards,55286,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w6,static/cards.pdf
+Debit Card[Mastercard],Cards,55362,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w7,static/cards.pdf
+Debit Card[Mastercard],Cards,55403,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w8,static/cards.pdf
+Debit Card[Mastercard],Cards,55438,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w9,static/cards.pdf
+Debit Card[Mastercard],Cards,55533,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w10,static/cards.pdf
+Credit Card[Visa],Cards,45074,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w11,static/cards.pdf
+Credit Card[Visa],Cards,45095,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w12,static/cards.pdf
+Credit Card[Visa],Cards,45132,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w13,static/cards.pdf
+Credit Card[Visa],Cards,45149,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w14,static/cards.pdf
+Credit Card[Visa],Cards,45244,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w15,static/cards.pdf
+Credit Card[Visa],Cards,45277,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w16,static/cards.pdf
+Credit Card[Visa],Cards,45300,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w17,static/cards.pdf
+Credit Card[Visa],Cards,45328,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w18,static/cards.pdf
+Credit Card[Visa],Cards,45426,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w19,static/cards.pdf
+Credit Card[Visa],Cards,45459,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w20,static/cards.pdf
+Credit Card[Visa],Cards,45465,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w21,static/cards.pdf
+Credit Card[Visa],Cards,45511,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w22,static/cards.pdf
+Credit Card[Visa],Cards,45578,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w23,static/cards.pdf
+Credit Card[Visa],Cards,45653,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w24,static/cards.pdf
+Credit Card[Visa],Cards,45694,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w25,static/cards.pdf
+Credit Card[Visa],Cards,45784,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w26,static/cards.pdf
+Credit Card[Visa],Cards,45865,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w27,static/cards.pdf
+Credit Card[Visa],Cards,45929,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w28,static/cards.pdf
+Credit Card[Visa],Cards,45929,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w29,static/cards.pdf
+Credit Card[Visa],Cards,45985,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w30,static/cards.pdf
+Credit Card[Visa],Cards,46005,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w31,static/cards.pdf
+Credit Card[Visa],Cards,46020,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w32,static/cards.pdf
+Credit Card[Visa],Cards,46046,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w33,static/cards.pdf
+Debit Card[American Express],Cards,34079,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w34,static/cards.pdf
+Debit Card[American Express],Cards,37129,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w35,static/cards.pdf
+Debit Card[American Express],Cards,37186,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w36,static/cards.pdf
+Debit Card[American Express],Cards,37243,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w37,static/cards.pdf
+Debit Card[American Express],Cards,37300,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w38,static/cards.pdf
+Debit Card[American Express],Cards,37357,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w39,static/cards.pdf
+Debit Card[American Express],Cards,37414,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w40,static/cards.pdf
+Debit Card[American Express],Cards,37471,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w41,static/cards.pdf
+Debit Card[American Express],Cards,37528,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w42,static/cards.pdf
+Debit Card[American Express],Cards,37585,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w43,static/cards.pdf
+Debit Card[American Express],Cards,37642,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w44,static/cards.pdf
+Debit Card[American Express],Cards,37699,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w45,static/cards.pdf
+Debit Card[American Express],Cards,37756,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w46,static/cards.pdf
+Debit Card[American Express],Cards,37813,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w47,static/cards.pdf
+Debit Card[American Express],Cards,37870,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w48,static/cards.pdf
+Debit Card[American Express],Cards,37927,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w49,static/cards.pdf
+Debit Card[American Express],Cards,37984,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w50,static/cards.pdf
+Debit Card[American Express],Cards,37657,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w51,static/cards.pdf
+Debit Card[American Express],Cards,37330,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w52,static/cards.pdf
+Debit Card[American Express],Cards,37003,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w53,static/cards.pdf
+Debit Card[American Express],Cards,37400,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w54,static/cards.pdf
+Debit Card[American Express],Cards,37073,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w55,static/cards.pdf
+Discover,Cards,65074,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w56,static/cards.pdf
+Discover,Cards,65111,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w57,static/cards.pdf
+Discover,Cards,65208,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w58,static/cards.pdf
+Discover,Cards,65284,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w59,static/cards.pdf
+Discover,Cards,65314,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w60,static/cards.pdf
+Discover,Cards,65340,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w61,static/cards.pdf
+Discover,Cards,65369,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w62,static/cards.pdf
+Discover,Cards,65401,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w63,static/cards.pdf
+Discover,Cards,65429,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w64,static/cards.pdf
+Discover,Cards,65517,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w65,static/cards.pdf
+Discover,Cards,65598,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w66,static/cards.pdf
+Discover,Cards,65656,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w67,static/cards.pdf
+Discover,Cards,65676,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w68,static/cards.pdf
+Discover,Cards,65741,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w69,static/cards.pdf
+Discover,Cards,65744,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w70,static/cards.pdf
+Discover,Cards,65842,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w71,static/cards.pdf
+Discover,Cards,65909,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w72,static/cards.pdf
+Discover,Cards,65971,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w73,static/cards.pdf
+Discover,Cards,66060,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w74,static/cards.pdf
+Discover,Cards,66127,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w75,static/cards.pdf
+Discover,Cards,66213,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w76,static/cards.pdf
+Discover,Cards,66228,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w77,static/cards.pdf
+Discover,Cards,66263,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w78,static/cards.pdf
+Discover,Cards,66268,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w79,static/cards.pdf
+Discover,Cards,66356,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w80,static/cards.pdf
+Discover,Cards,66376,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w81,static/cards.pdf
+Credit Card[American Express],Cards,33129,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w82,static/cards.pdf
+Credit Card[American Express],Cards,33146,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w83,static/cards.pdf
+Credit Card[American Express],Cards,33163,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w84,static/cards.pdf
+Credit Card[American Express],Cards,33180,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w85,static/cards.pdf
+Credit Card[American Express],Cards,33197,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w86,static/cards.pdf
+Credit Card[American Express],Cards,33214,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w87,static/cards.pdf
+Credit Card[American Express],Cards,33231,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w88,static/cards.pdf
+Credit Card[American Express],Cards,33248,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w89,static/cards.pdf
+Credit Card[American Express],Cards,33265,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w90,static/cards.pdf
+Credit Card[American Express],Cards,33282,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w91,static/cards.pdf
+Credit Card[American Express],Cards,33299,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w92,static/cards.pdf
+Credit Card[American Express],Cards,33316,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w93,static/cards.pdf
+Credit Card[American Express],Cards,33333,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w94,static/cards.pdf
+Credit Card[American Express],Cards,33350,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w95,static/cards.pdf
+Credit Card[American Express],Cards,33367,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w96,static/cards.pdf
+Credit Card[American Express],Cards,33384,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w97,static/cards.pdf
+Credit Card[American Express],Cards,33401,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w98,static/cards.pdf
+Credit Card[American Express],Cards,33418,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w99,static/cards.pdf
+Credit Card[American Express],Cards,33435,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w100,static/cards.pdf
+Credit Card[American Express],Cards,33452,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w101,static/cards.pdf
+Credit Card[American Express],Cards,33469,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w102,static/cards.pdf
+Credit Card[American Express],Cards,33486,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w103,static/cards.pdf
+Credit Card[American Express],Cards,33503,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w104,static/cards.pdf
+Credit Card[American Express],Cards,33520,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w105,static/cards.pdf
+Credit Card[American Express],Cards,33537,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w106,static/cards.pdf
+Credit Card[American Express],Cards,33554,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w107,static/cards.pdf
+Credit Card[Mastercard],Cards,52992,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w108,static/cards.pdf
+Credit Card[Mastercard],Cards,53009,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w109,static/cards.pdf
+Credit Card[Mastercard],Cards,53026,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w110,static/cards.pdf
+Credit Card[Mastercard],Cards,53043,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w111,static/cards.pdf
+Credit Card[Mastercard],Cards,53060,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w112,static/cards.pdf
+Credit Card[Mastercard],Cards,53077,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w113,static/cards.pdf
+Credit Card[Mastercard],Cards,53094,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w114,static/cards.pdf
+Credit Card[Mastercard],Cards,53111,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w115,static/cards.pdf
+Credit Card[Mastercard],Cards,53128,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w116,static/cards.pdf
+Credit Card[Mastercard],Cards,53145,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w117,static/cards.pdf
+Credit Card[Mastercard],Cards,53162,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w118,static/cards.pdf
+Credit Card[Mastercard],Cards,53179,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w119,static/cards.pdf
+Credit Card[Mastercard],Cards,53196,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w120,static/cards.pdf
+Credit Card[Mastercard],Cards,53213,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w121,static/cards.pdf
+Credit Card[Mastercard],Cards,53230,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w122,static/cards.pdf
+Credit Card[Mastercard],Cards,53247,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w123,static/cards.pdf
+Credit Card[Mastercard],Cards,53264,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w124,static/cards.pdf
+Credit Card[Mastercard],Cards,53281,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w125,static/cards.pdf
+Credit Card[Mastercard],Cards,53298,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w126,static/cards.pdf
+Credit Card[Mastercard],Cards,53315,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w127,static/cards.pdf
+Credit Card[Mastercard],Cards,53332,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w128,static/cards.pdf
+Credit Card[Mastercard],Cards,53349,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w129,static/cards.pdf
+Credit Card[Mastercard],Cards,53366,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w130,static/cards.pdf
+Credit Card[Mastercard],Cards,53383,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w131,static/cards.pdf
+Credit Card[Mastercard],Cards,53400,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w132,static/cards.pdf
+Credit Card[Mastercard],Cards,53417,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w133,static/cards.pdf
+Credit Card[Mastercard],Cards,53434,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w134,static/cards.pdf
+Credit Card[Mastercard],Cards,53451,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w135,static/cards.pdf
+Credit Card[Mastercard],Cards,53468,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w136,static/cards.pdf
+Credit Card[Mastercard],Cards,53485,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w137,static/cards.pdf
+Credit Card[Mastercard],Cards,53502,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w138,static/cards.pdf
+Credit Card[Mastercard],Cards,53519,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w139,static/cards.pdf
+Credit Card[Mastercard],Cards,53536,250,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w140,static/cards.pdf

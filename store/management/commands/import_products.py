@@ -24,7 +24,7 @@ class Command(BaseCommand):
                         pdf = File(pdf_file)
                         product_data = {
                             'name': row['name'],
-                            'category': Category.objects.get(name=row['name']),
+                            'category': Category.objects.get(name=row['category']),
                             'Balance': row['Balance'],
                             'Title': row['Title'],
                             'Info': row['Info'],
