@@ -11,8 +11,7 @@ def home(request):
 def category_list(request, category_slug):
     category = get_object_or_404(Category, slug=category_slug)
     products = Product.objects.filter(category=category)
-    cards = Category.objects.get(name="Cards")
-    return render(request, 'category.html', {'category': category, 'products': products,'cards':cards})
+    return render(request, 'category.html', {'category': category, 'products': products})
 
 def trial(request):
     
