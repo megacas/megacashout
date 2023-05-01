@@ -5,10 +5,22 @@
   {% if products %}
     <caption class="text-white">{{category.name}}</caption>
     {% if category.name == "Cards" %}
+    
     <thead>
       <tr>
         <th scope="col" class="text-white">Type</th>
         <th scope="col" class="text-white">Bin</th>
+        <th scope="col" class="text-white">Title</th>
+        <th scope="col" class="text-white">Info</th>
+        <th scope="col" class="text-white">Price</th>
+        <th scope="col" class="text-white">Status</th>
+        <th scope="col" class="text-white">Action</th>
+      </tr>
+    </thead>
+    {% elif category.name == "Extraction" %}
+    <thead>
+      <tr>
+        <th scope="col" class="text-white">#</th>
         <th scope="col" class="text-white">Title</th>
         <th scope="col" class="text-white">Info</th>
         <th scope="col" class="text-white">Price</th>
@@ -34,7 +46,7 @@
         {% for product in products %}
       <tr>
         <td scope="row" class="text-white">{% if category.name == "Cards" %}{{product.name}}{% else %}1{% endif %}</td>
-        <td class="text-white">{% if category.name == "Cards" %}{{product.Balance}}*****{% else %}${{product.Balance}}{% endif %}</td>
+        {% if category.name == "Extraction" %}{% else %}<td class="text-white">{% if category.name == "Cards" %}{{product.Balance}}*****{% else %}${{product.Balance}}{% endif %}</td>{% endif %}
         <td class="text-white">{{product.Title}}</td>
         <td class="text-white w-50">{{product.Info}}</td>
         <td class="text-white">${{product.price}}</td>
