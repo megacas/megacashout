@@ -34,7 +34,7 @@
         {% for product in products %}
       <tr>
         <td scope="row" class="text-white">{% if category.name == "Cards" %}{{product.name}}{% else %}1{% endif %}</td>
-        <td class="text-white">{% if category.name == "Cards" %}{{product.Balance}}{% else %}${{product.Balance}}{% endif %}</td>
+        <td class="text-white">{% if category.name == "Cards" %}{{product.Balance}}*****{% else %}${{product.Balance}}{% endif %}</td>
         <td class="text-white">{{product.Title}}</td>
         <td class="text-white w-50">{{product.Info}}</td>
         <td class="text-white">${{product.price}}</td>
