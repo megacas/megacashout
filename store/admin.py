@@ -9,9 +9,9 @@ class CategoryAdmin(admin.ModelAdmin):
     
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name','title','category','Balance', 'price', 'pdf','Status','premium')
+    list_display = ('name','Title','category','Balance', 'price', 'pdf','Status','premium')
     list_filter = ('name',"price",'premium','created')
     search_fields = ('price','category')
     
-    list_editable = ('pdf','Balance','price','Status',"category",'premium','title')
+    list_editable = ('pdf','Balance','price','Status',"category",'premium','Title')
     prepopulated_fields ={'slug': ('name',)}
