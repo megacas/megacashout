@@ -210,7 +210,11 @@ def send_link(request,product_id):
     user = request.user
     activation_link = product.pdf.url
     if product.premium:
-        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs {1}. If access is restricted, press on this link to buy a decryptor "https://megacashouts.store/category/extraction"'.format(user.user_name, activation_link, product.name)
+        message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs {1}. If access is restricted, press on this link to access a decryptor "https://ams3.digitaloceanspaces.com/megacash/media/pdfs/Extraction.pdf?AWSAccessKeyId=DO00C4HYQD6X7D24X78G&Signature=D4EwpbY7rHie2UcSUTwNDOp0%2F2w%3D&Expires=1683035913 ". Text your chatbot for tutorials as well.'.format(user.user_name, activation_link, product.name)
+    elif product.category.name == "Extraction":
+        message = 'Hi {0}, Your purchase of your {2} has been processed successfully. Please click the link below to download the PDF containing all necessary information about how to extract {1}'.format(user.user_name, activation_link, product.name)
+    elif product.category.name == "Cards":
+        message = 'Hi {0}, Your purchase of {2} has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs {1}. If access is restricted, press on this link to buy a decryptor "https://megacashouts.store/category/extraction"'.format(user.user_name, activation_link, product.name)
     else:
         message = 'Hi {0}, Your purchase of {2} log has been processed successfully. Please click the link below to download a PDF containing all necessary information about the logs {1}. If access is restricted, press on this link to buy a decryptor "https://megacashouts.store/category/extraction"'.format(user.user_name, activation_link, product.name)
     data = {
