@@ -1,6 +1,6 @@
 from .models import Category
 from payment.models import *
-from django.shortcuts import redirect
+import random
 def categories(request):
     return{
         'usa': Category.objects.filter(location=0),   
@@ -34,17 +34,11 @@ def invoice(request):
         invoice = 0
         return {'invoice':invoice}
 
-import random
-from django.http import JsonResponse
-import random
-import time
 
-import time
-import random
 
 def random_name(request):
     names = ['Kolaskov','Mclean', 'Trevor', 'Rexxy', 'Sarah', 'David', 'Draven', 'Raven', 'Malachi', 'Lilith', 'Azazel', 'Morgana', 'Damien', 'Bellatrix', 'Lucius', 'Luna', 'Salem', 'Morticia', 'Vladimir', 'Selene', 'Spike','Devon']
-    bank_names = ['Bank of America', 'Chase', 'Wells Fargo', 'Citibank', 'US Bank', 'HSBC', 'Barclays', 'TD Bank', 'PNC Bank', 'Capital One', 'SunTrust', 'BB&T Bank', 'Santander Bank', 'Regions Bank', 'Fifth Third Bank', 'KeyBank', 'Ally Bank']
+    bank_names = ['Bank of America', 'Chase', 'Wells Fargo', 'Citibank', 'US Bank', 'Citizens', '20th Century fox Credit Union', 'TD Bank', 'PNC Bank', 'Hutington Bank', 'SunTrust', 'ANZ Bank', 'Woodforest Bank', 'Regions Bank', 'Zelle', 'N26', 'Chime']
     name = random.choice(names)
     bank_name = random.choice(bank_names)
     
