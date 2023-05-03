@@ -25,7 +25,7 @@ class RegistrationForm(forms.ModelForm):
         ('CA', 'Canada'),
         ('DE', 'Germany'),
         ('AU', 'Australia'),
-        ('GH', 'Ghana'),
+        #('GH', 'Ghana'),
     ]
 
     user_name = forms.CharField(label='Enter Username', min_length=4, max_length=50, help_text='Required', required=False)
