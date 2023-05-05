@@ -2,7 +2,6 @@ import uuid
 
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
                                         PermissionsMixin)
-from django.core.mail import send_mail
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -36,7 +35,7 @@ class CustomAccountManager(BaseUserManager):
         return user
 
 class Customer(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(_('email address'))
+    email = models.EmailField(_('email address'), unique=True)
     user_name = models.CharField(max_length=150)
     mobile = models.CharField(max_length=20, blank=True)
     is_active = models.BooleanField(default=False)
@@ -53,14 +52,6 @@ class Customer(AbstractBaseUser, PermissionsMixin):
         verbose_name = "Accounts"
         verbose_name_plural = "Accounts"
 
-    def email_user(self, subject, message):
-        send_mail(
-            subject,
-            message,
-            'Megacashsupport@megacashout.com',
-            [self.email],
-            fail_silently=False,
-        )
 
     def __str__(self):
         return self.user_name

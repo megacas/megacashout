@@ -28,8 +28,8 @@ class RegistrationForm(forms.ModelForm):
         #('GH', 'Ghana'),
     ]
 
-    user_name = forms.CharField(label='Enter Username', min_length=4, max_length=50, help_text='Required', required=False)
-    mobile = forms.CharField(label='Enter Phone Number', min_length=10, max_length=14, help_text='Required')
+    user_name = forms.CharField(label='Username', min_length=4, max_length=50, help_text='Required', required=False)
+    mobile = forms.CharField(label='Phone Number', min_length=10, max_length=14, help_text='Required')
     email = forms.EmailField(max_length=100, help_text='Required', error_messages={'required': 'Sorry, you will need an email'})
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
@@ -55,7 +55,12 @@ class RegistrationForm(forms.ModelForm):
             raise forms.ValidationError('Passwords do not match.')
         return cd['password2']
 
-    
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        if Customer.objects.filter(email=email).exists():
+            raise forms.ValidationError(
+                'Please use another Email, that is already taken')
+        return email
     
     def clean_mobile(self):
         mobile = self.cleaned_data['mobile']
