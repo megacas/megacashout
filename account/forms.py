@@ -3,7 +3,7 @@ from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm,
                                        SetPasswordForm)
 
 from .models import Customer
-
+import re
 
 
 class UserLoginForm(AuthenticationForm):
@@ -55,12 +55,13 @@ class RegistrationForm(forms.ModelForm):
             raise forms.ValidationError('Passwords do not match.')
         return cd['password2']
 
-    def clean_email(self):
-        email = self.cleaned_data['email']
-        if Customer.objects.filter(email=email).exists():
-            raise forms.ValidationError(
-                'Please use another Email, that is already taken')
-        return email
+    
+    
+    def clean_mobile(self):
+        mobile = self.cleaned_data['mobile']
+        if not re.match(r'^\d+$', mobile):
+            raise forms.ValidationError('Please neglect country code or any brackets')
+        return mobile
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
