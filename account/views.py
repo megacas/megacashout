@@ -28,19 +28,19 @@ def account_register(request):
             
             if country_choice == 'US':
                 phone_number = "+1" + phone_number
-                user.mobile = "+1" + phone_number
+                user.mobile = phone_number
             elif country_choice == 'GH':
                 phone_number = "+233" + phone_number
-                user.mobile = "+233" + phone_number
+                user.mobile = phone_number
             elif country_choice == 'CA':
                 phone_number = "+1" + phone_number
-                user.mobile = "+1" + phone_number
+                user.mobile = phone_number
             if country_choice == 'DE':
                 phone_number = "+49" + phone_number
-                user.mobile = "+49" + phone_number
+                user.mobile = phone_number
             if country_choice == 'AU':
                 phone_number = "+61" + phone_number
-                user.mobile = "+61" + phone_number
+                user.mobile = phone_number
 
             user.email = registerForm.cleaned_data["email"]
             email = registerForm.cleaned_data["email"]
