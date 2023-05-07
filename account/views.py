@@ -2,13 +2,18 @@ from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils.encoding import  force_str
-from django.utils.http import urlsafe_base64_decode
+from django.utils.http import urlsafe_base64_decode,urlsafe_base64_encode
 from .forms import RegistrationForm
 from .models import  Customer
 from .tokens import account_activation_token
 from hubtel.views import send_otp
 from django.contrib.auth import login
 from payment.models import *
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+from django.utils.encoding import force_bytes
+from django.contrib.sites.shortcuts import get_current_site
 @login_required
 def dashboard(request):
     user = request.user
@@ -75,3 +80,31 @@ def account_activate(request, uidb64, token):
     else:
         return render(request, "account/registration/activation_invalid.html")
 
+def send_activation_email(request):
+    if request.user.is_authenticated:
+        user = request.user
+    else:
+        user_id = request.session.get('user_id')
+        # Retrieve user ID from session
+        print(user_id)
+        if user_id:
+            try:
+                user = Customer.objects.get(id=user_id)
+                
+            except Customer.DoesNotExist:
+                user = None
+        else:
+            user = None  # assuming the user is already registered
+    current_site = get_current_site(request)
+    subject = 'Activate your Account'
+    message = render_to_string('account/registration/account_activation_email.html', {
+        'user': user,
+        'domain': current_site.domain,
+        'uid': urlsafe_base64_encode(force_bytes(user.id)),
+        'token': account_activation_token.make_token(user),
+    })
+    from_email = 'Megacashouts@logs.com'  # set your own email address here
+    to_email = user.email
+    send_mail(subject, message, from_email, [to_email], fail_silently=False)
+    del request.session['user_id']
+    return HttpResponse('Activation email sent successfully.')

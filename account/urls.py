@@ -16,6 +16,7 @@ urlpatterns = [
                                                 form_class=UserLoginForm), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='/account/login/'), name='logout'),
     path('register/', views.account_register, name='register'),
+    path('email/register/', views.send_activation_email, name='send_mail'),
     path('activate/<slug:uidb64>/<slug:token>/', views.account_activate, name='activate'),
     # Reset password
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name="account/user/password_reset_form.html",

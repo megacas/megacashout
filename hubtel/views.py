@@ -58,7 +58,7 @@ def send_otp(request, users, phone_number):
         return True
     else:
         send_activation_link_via_sms(request, users)
-        del request.session['user_id']
+        
         return False
 
 
