@@ -78,7 +78,7 @@ def account_activate(request, uidb64, token):
         login(request, user)
         return redirect("home")
     else:
-        return render(request, "account/registration/activation_invalid.html")
+        return HttpResponse("Activation invalid")
 
 def send_activation_email(request):
     if request.user.is_authenticated:
