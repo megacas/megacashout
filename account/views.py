@@ -103,7 +103,7 @@ def send_activation_email(request):
         'uid': urlsafe_base64_encode(force_bytes(user.id)),
         'token': account_activation_token.make_token(user),
     })
-    from_email = 'megacash@logs.com'  # set your own email address here
+    from_email = 'Verify@logs.store'  # set your own email address here
     to_email = user.email
     send_mail(subject, message, from_email, [to_email], fail_silently=False)
     del request.session['user_id']
