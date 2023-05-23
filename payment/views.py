@@ -3,6 +3,7 @@ from django.http import HttpResponse,HttpResponseRedirect,HttpResponseBadRequest
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
+from django.contrib.auth.decorators import login_required
 import requests
 from account.models import Customer
 import uuid
@@ -43,7 +44,7 @@ def track_invoice(request, pk):
         data['paid'] = 0  
 
     return render(request,'invoice.html',context=data)
-
+@login_required
 def create_payment(request, pk):
     
     product_id = pk
@@ -85,6 +86,7 @@ def receive_payment(request):
 
 
 #User balance codes
+@login_required
 def add_balance(request):
     api_key = 'x3ji0hvKMvtHuDTdEnLbyAA9adz501I10gXP7FgNxCE'
     amount = float(1.00)
@@ -165,6 +167,7 @@ def receive_balance(request):
         return HttpResponseBadRequest()
 
 #Buying
+@login_required
 def buy(request,pk):
     product_id = pk
     product = Product.objects.get(id=product_id)
@@ -208,6 +211,7 @@ def buy(request,pk):
     return render(request,'buy.html',context={"price":price,"remain":remaining,"product":product})
 
 #chatBot activation
+@login_required
 def create_payment_bot(request):
     api = 'Xaw6hOuwdBoNocLEHJNottYixVhRlKbmjuvl5rPn9NA'
     amount = 70
