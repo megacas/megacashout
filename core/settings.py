@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "static_root"
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-SASS_PROCESSOR_ROOT = BASE_DIR/'static/scss'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "staticfiles-cdn" / "uploads"
 from .cdn.conf import * # noqa
