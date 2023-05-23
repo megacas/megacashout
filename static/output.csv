@@ -5898,7 +5898,7 @@ Cards,Credit Card[Mastercard],53485,PAYMENT CARD,(State)+(Expiration Number)+(Na
 Cards,Credit Card[Mastercard],53502,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w138-6050,371,TRUE,FALSE,static/cards.pdf
 Cards,Credit Card[Mastercard],53519,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w139-6051,371,TRUE,FALSE,static/cards.pdf
 Cards,Credit Card[Mastercard],53536,PAYMENT CARD,(State)+(Expiration Number)+(Name And Address)+(Email access)+(Zip),w140-6052,371,TRUE,FALSE,static/cards.pdf
-Extraction,Extraction,******,Extraction/Decryptor,[All Decryptions],extraction,400,TRUE,FALSE,pdfs/Extraction.pdf
+Extraction,Extraction,******,Extraction/Decryptor,[All Decryptions],extraction,400,TRUE,FALSE,static/Extraction.pdf
 USA FULLZ,Fullz,NY,PUA & FULLZ,(State)+(Name And Address)+(Email access)+(Zip)+(SSN)+(DOB),w1-6054,250,TRUE,FALSE,static/fullz.pdf
 USA FULLZ,Fullz,WY,PUA & FULLZ,(State)+(Name And Address)+(Email access)+(Zip)+(SSN)+(DOB),w2-6055,250,TRUE,FALSE,static/fullz.pdf
 USA FULLZ,Fullz,WI,PUA & FULLZ,(State)+(Name And Address)+(Email access)+(Zip)+(SSN)+(DOB),w3-6056,250,TRUE,FALSE,static/fullz.pdf
