@@ -18,7 +18,7 @@ def exchanged_rate(amount):
     r = requests.get(url)
     response = r.json()
     return amount/response['price']
-
+@login_required
 def track_invoice(request, pk):
     invoice_id = pk
     invoice = Invoice.objects.get(id=invoice_id)
@@ -115,7 +115,7 @@ def add_balance(request):
     else:
         print(r.status_code, r.text)
         return HttpResponse("Some Error, Try Again!")
-
+@login_required
 def track_balance(request, pk):
     invoice_id = pk
     invoice = Balance.objects.get(id=invoice_id)
@@ -214,7 +214,7 @@ def buy(request,pk):
 @login_required
 def create_payment_bot(request):
     api = 'Xaw6hOuwdBoNocLEHJNottYixVhRlKbmjuvl5rPn9NA'
-    amount = 70
+    amount = 50
     url = 'https://www.blockonomics.co/api/new_address'
     headers = {'Authorization': "Bearer " + api}
     r = requests.post(url, headers=headers)
@@ -228,7 +228,7 @@ def create_payment_bot(request):
     else:
         print(r.status_code, r.text)
         return HttpResponse("Some Error, Try Again!")
-    
+@login_required   
 def track_invoice_bot(request, pk):
     chat_id = pk
     chat = ChatBot.objects.get(id=chat_id)
