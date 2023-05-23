@@ -4,6 +4,7 @@ from payment.models import *
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse,HttpResponse
 from .context_processors import random_name
+from django.conf import settings
 @login_required
 def home(request):
     return render(request,"home.html",)
@@ -21,13 +22,15 @@ from django.http import FileResponse
 import os
 
 def download_csv(request):
-    file_path = '/static/output.csv'  # Replace with the actual path to the exported CSV file
+    file_name = 'output.csv'  # Name of the CSV file
+    file_path = os.path.join(settings.STATICFILES_DIRS[0], file_name)  # Replace with the actual path to the exported CSV file
 
     if os.path.exists(file_path):
         with open(file_path, 'rb') as file:
-            response = FileResponse(file)
-            response['Content-Type'] = 'text/csv'
-            response['Content-Disposition'] = 'attachment; filename="output.csv"'
-            return response
+            file_content = file.read()  # Read file contents into memory
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = f'attachment; filename="{file_name}"'
+        response.write(file_content)  # Write the file content to the response
+        return response
     else:
         return HttpResponse('File not found.')
