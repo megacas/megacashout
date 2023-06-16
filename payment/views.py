@@ -34,7 +34,7 @@ def track_invoice(request, pk):
         data['paid'] =  invoice.received/1e8
         if (int(invoice.btcvalue) <= int(invoice.received)):
             send_link(request,product_id=invoice.product.id)
-            if invoice.product.category.name == "Extraction":
+            if invoice.product.category.name == "Genesis":
                 pass
             else:
                 invoice.product.Status = False
@@ -200,7 +200,7 @@ def buy(request,pk):
                                 address=balance.address,btcvalue=balance.btcvalue, product=product, 
                                 created_by=request.user,sold=True,received=balance.received)
                 send_link(request,product_id=product_id)
-                if product.category.name == "Extraction":
+                if product.category.name == "Genesis":
                     pass
                 else:
                     product.Status = False
