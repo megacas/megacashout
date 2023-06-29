@@ -114,7 +114,7 @@ def add_balance(request):
 
     else:
         print(r.status_code, r.text)
-        return HttpResponse("Some Error, Try Again!")
+        return HttpResponse(f"Some Error, Try Again! {r.status_code}")
 @login_required
 def track_balance(request, pk):
     invoice_id = pk
