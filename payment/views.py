@@ -11,8 +11,29 @@ from store.models import *
 from .models import *
 from hubtel.views import send_link
 # Create your views here.
+def send_mail(request,product):
+    if not request.user.verified:
+        from_email = "Verify@logs.store"
 
+        to_email = request.user.email
+        subject = 'Order confirmation'
+        text_content = 'Thank you for the order!'
+        html_content = render_to_string('email_notify_customer.html', {'order': product})
 
+        msg = EmailMultiAlternatives(subject, text_content, from_email, [to_email])
+        msg.attach_alternative(html_content, 'text/html')
+        msg.send()
+    else:
+        from_email = "Verify@logs.store"
+
+        to_email = request.user.email
+        subject = 'Order confirmation'
+        text_content = 'Thank you for the order!'
+        html_content = render_to_string('email_notify_customer_extraction.html', {'order': product})
+
+        msg = EmailMultiAlternatives(subject, text_content, from_email, [to_email])
+        msg.attach_alternative(html_content, 'text/html')
+        msg.send()
 def exchanged_rate(amount):
     url = "https://www.blockonomics.co/api/price?currency=USD"
     r = requests.get(url)
@@ -34,6 +55,7 @@ def track_invoice(request, pk):
         data['paid'] =  invoice.received/1e8
         if (int(invoice.btcvalue) <= int(invoice.received)):
             send_link(request,product_id=invoice.product.id)
+            send_mail(request,invoice.product)
             if invoice.product.category.name == "Genesis":
                 pass
             else:
@@ -200,6 +222,7 @@ def buy(request,pk):
                                 address=balance.address,btcvalue=balance.btcvalue, product=product, 
                                 created_by=request.user,sold=True,received=balance.received)
                 send_link(request,product_id=product_id)
+                send_mail(request,product)
                 if product.category.name == "Genesis":
                     pass
                 else:
