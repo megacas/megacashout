@@ -1,7 +1,7 @@
 import csv
 from django.core.management.base import BaseCommand
 from account.models import Customer
-from passlib.hash import pbkdf2_sha256
+
 
 class Command(BaseCommand):
     help = 'Export products to a data file'
