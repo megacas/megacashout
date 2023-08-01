@@ -1,7 +1,7 @@
 import csv
 from account.models import Customer
 from django.core.management.base import BaseCommand
-from passlib.hash import pbkdf2_sha256
+
 
 class Command(BaseCommand):
     help = 'Import users from a CSV file'
