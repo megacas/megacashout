@@ -17,7 +17,7 @@ class Invoice(models.Model):
     sold = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.product.name
+        return self.address
     
 class Balance(models.Model):
     STATUS_CHOICES = ((-1,"Not Started"),(0,'Unconfirmed'), (1,"Partially Confirmed"), (2,"Confirmed"))
