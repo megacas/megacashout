@@ -28,17 +28,18 @@ class Command(BaseCommand):
 
                 try:
                     product = Product.objects.get(slug=row['Slug'], category=category)
-                    for key, value in product_data.items():
-                        setattr(product, key, value)
+                    if not product:  # Check if product does not exist
+                        for key, value in product_data.items():
+                            setattr(product, key, value)
 
-                    pdf_path = row['PDF']
-                    if pdf_path:
-                        with open(pdf_path, 'rb') as pdf_file:
-                            product.pdf.save(pdf_path, pdf_file, save=True)
-                    else:
-                        product.pdf = None
-
-                    product.save()
+                        pdf_path = row['PDF']
+                        if pdf_path:
+                            with open(pdf_path, 'rb') as pdf_file:
+                                product.pdf.save(pdf_path, pdf_file, save=True)
+                        else:
+                            product.pdf = None
+                            
+                        product.save()
                 except Product.DoesNotExist:
                     Product.objects.create(**product_data)
 
