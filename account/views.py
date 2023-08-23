@@ -70,8 +70,9 @@ def account_activate(request, uidb64, token):
     try:
         uid = force_str(urlsafe_base64_decode(uidb64))
         user = Customer.objects.get(pk=uid)
-    except (TypeError, ValueError, OverflowError, user.DoesNotExist):
+    except (TypeError, ValueError, OverflowError, Customer.DoesNotExist):
         user = None
+        return HttpResponse("Activation invalidated. User account not found")
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
@@ -93,8 +94,10 @@ def send_activation_email(request):
                 
             except Customer.DoesNotExist:
                 user = None
+                return HttpResponse("Problem with Signup. Contact chat support")
         else:
             user = None  # assuming the user is already registered
+            return HttpResponse("Problem with Signup. Contact chat support")
     current_site = get_current_site(request)
     subject = 'Activate your Account'
     message = render_to_string('account/registration/account_activation_email.html', {
