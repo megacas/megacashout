@@ -20,7 +20,7 @@ class Command(BaseCommand):
             for row in reader:
                 category_name = row['Category']
                 category, _ = Category.objects.get_or_create(name=category_name)
-                pdf_path = row['pdf']
+                pdf_path = row['PDF']
                 if pdf_path:
                     with open(pdf_path, 'rb') as pdf_file:
                         pdf = File(pdf_file)
