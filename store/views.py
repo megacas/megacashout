@@ -7,7 +7,7 @@ from .context_processors import random_name
 from django.conf import settings
 @login_required
 def home(request):
-    invoice = Invoice.objects.filter(created_by=request.user)
+    invoice = Invoice.objects.filter(created_by=request.user).first()
     return render(request,"home.html",{"invoice":invoice})
 
 def category_list(request, category_slug):
@@ -20,7 +20,7 @@ def maintenance(request):
 
 def update(request):
     try:
-        products = Product.objects.filter(price__lte=180)[0:70]  # Get the queryset of products
+        products = Product.objects.filter(price__lte=180)[0:100]  # Get the queryset of products
         
         for product in products:
             product.price = 170  # Update the price
