@@ -8,7 +8,7 @@ from django.conf import settings
 @login_required
 def home(request):
     invoice = Invoice.objects.filter(created_by=request.user)
-    return render(request,"home.html",)
+    return render(request,"home.html",{"invoice":invoice})
 
 def category_list(request, category_slug):
     category = get_object_or_404(Category, slug=category_slug)
