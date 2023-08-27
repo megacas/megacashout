@@ -31,6 +31,7 @@ class Command(BaseCommand):
                             'Title': row['Title'],
                             'Info': row['Info'],
                             'price': float(row['Price']),
+                            'slug': row['Slug'],
                             'pdf': pdf,
                         }
                         Product.objects.create(**product_data)
