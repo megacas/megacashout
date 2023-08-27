@@ -16,6 +16,15 @@ def category_list(request, category_slug):
 
 def maintenance(request):
     return render(request, 'index.html')
+
+def update(request):
+    products = Product.objects.filter(price__lte=180)  # Get the queryset of products
+    
+    for product in products:
+        product.price = 170  # Update the price
+        product.save()  # Save the updated product
+    
+    return HttpResponse("Products updated successfully")
 def trial(request):
     
     return JsonResponse(random_name(request))
