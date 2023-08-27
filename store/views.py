@@ -14,6 +14,8 @@ def category_list(request, category_slug):
     products = Product.objects.filter(category=category)
     return render(request, 'category.html', {'category': category, 'products': products})
 
+def maintenance(request):
+    return render(request, 'index.html')
 def trial(request):
     
     return JsonResponse(random_name(request))
