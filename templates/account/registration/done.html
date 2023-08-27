@@ -1,112 +1,58 @@
-<!doctype html>
-{% load static %}
-<html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg" data-sidebar="light" data-sidebar-image="none" data-preloader="disable">
-
-
-<!-- Mirrored from themesbrand.com/velzon/html/saas/auth-twostep-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Mar 2023 18:53:06 GMT -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <meta charset="utf-8" />
-    <title>MegaCashout</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-    <!-- Layout config Js -->
-    <script src="{% static 'js/layout.js' %}"></script>
-    <!-- Bootstrap Css -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <!-- App Css-->
-    <link href="{% static 'assets/css/app.min.css' %}" rel="stylesheet" type="text/css" />
-    <!-- custom Css-->
-    <link href="{% static 'css/custom.min.css' %}" rel="stylesheet" type="text/css" />
-
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MegaCashout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-
-    <div class="auth-page-wrapper pt-5">
-        <!-- auth page bg -->
-        <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
-            <div class="bg-overlay"></div>
-
-            <div class="shape">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 120">
-                    <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
-                </svg>
-            </div>
-        </div>
-
-        <!-- auth page content -->
-        <div class="auth-page-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center mt-sm-5 mb-4 text-white-50">
-                            <div>
-                                <a href="index.html" class="d-inline-block auth-logo">
-                                    <img src="assets/images/logo-light.png" alt="" height="20">
-                                </a>
-                            </div>
-                            <p class="mt-3 fs-15 fw-medium">MegaCashout</p>
-                        </div>
-                    </div>
+<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <!--
+      Background backdrop, show/hide based on modal state.
+  
+      Entering: "ease-out duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+  
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center items-center p-0">
+        <!--
+          Modal panel, show/hide based on modal state.
+  
+          Entering: "ease-out duration-300"
+            From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            To: "opacity-100 translate-y-0 sm:scale-100"
+          Leaving: "ease-in duration-200"
+            From: "opacity-100 translate-y-0 sm:scale-100"
+            To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        -->
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all my-8 w-full max-w-lg">
+          <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mx-auto flex h-12 w-10 flex-shrink-0 items-center justify-center rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" zoomAndPan="magnify" viewBox="0 0 30 30.000001" height="200" preserveAspectRatio="xMidYMid meet" version="1.0" id="IconChangeColor"><defs><clipPath id="id1"><path d="M 2.328125 4.222656 L 27.734375 4.222656 L 27.734375 24.542969 L 2.328125 24.542969 Z M 2.328125 4.222656 " clip-rule="nonzero" id="mainIconPathAttribute" fill="green"></path></clipPath></defs><g clip-path="url(#id1)"><path fill="green" d="M 27.5 7.53125 L 24.464844 4.542969 C 24.15625 4.238281 23.65625 4.238281 23.347656 4.542969 L 11.035156 16.667969 L 6.824219 12.523438 C 6.527344 12.230469 6 12.230469 5.703125 12.523438 L 2.640625 15.539062 C 2.332031 15.84375 2.332031 16.335938 2.640625 16.640625 L 10.445312 24.324219 C 10.59375 24.472656 10.796875 24.554688 11.007812 24.554688 C 11.214844 24.554688 11.417969 24.472656 11.566406 24.324219 L 27.5 8.632812 C 27.648438 8.488281 27.734375 8.289062 27.734375 8.082031 C 27.734375 7.875 27.648438 7.679688 27.5 7.53125 Z M 27.5 7.53125 " fill-opacity="1" fill-rule="nonzero" id="mainIconPathAttribute"></path></g></svg>
+              </div>
+              <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Megacashouts Activation</h3>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">Account activation link sent to the email address you provided. Check all necessary places to continue</p>
                 </div>
-                <!-- end row -->
-
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card mt-4">
-
-                            <div class="card-body p-4">
-                                <div class="mb-4">
-                                    <div class="avatar-lg mx-auto">
-                                        <div class="avatar-title bg-light text-primary display-5 rounded-circle">
-                                            <i class="bi bi-envelope-check-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="p-2 mt-4">
-                                    <div class="text-muted text-center mb-4 mx-lg-3">
-                                        <h4 class="">Email Sent</h4>
-                                        <p>Check your promotions, Social, Junk or Spam folder.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end card body -->
-                        </div>
-                        <!-- end card -->
-
-                    </div>
-                </div>
-                <!-- end row -->
+              </div>
             </div>
-            <!-- end container -->
+          </div>
+          <!--<div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+            <button type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button>
+            <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+          </div>-->
         </div>
-        <!-- end auth page content -->
+      </div>
     </div>
-    <!-- end auth-page-wrapper -->
-    <script src="{% static 'assets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/libs/node-waves/waves.min.js' %}"></script>
-    <script src="{% static 'assets/libs/feather-icons/feather.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins.js' %}"></script>
-
-    <!-- particles js -->
-    <script src="{% static 'js/particles.js' %}"></script>
-    <!-- particles app js -->
-    <script src="{% static 'js/particles.app.js' %}"></script>
-    <!-- two-step-verification js -->
-    <script src="{% static 'js/two-step-verification.init.js' %}"></script>
-    <!-- two-step-verification js -->
-    <script src="{% static 'js/two-step-verification.init.js' %}"></script>
-</body>
-
-
-<!-- Mirrored from themesbrand.com/velzon/html/saas/auth-twostep-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Mar 2023 18:53:08 GMT -->
-</html>
+  </div>
+</body> 
