@@ -82,8 +82,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'URL':"postgres://default:eGxJj9Oryf5s@ep-autumn-rice-01715381-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb",
+        'PRISMA_URL':"postgres://default:eGxJj9Oryf5s@ep-autumn-rice-01715381-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb?pgbouncer=true&connect_timeout=15",
+        'URL_NON_POOLING':"postgres://default:eGxJj9Oryf5s@ep-autumn-rice-01715381.us-east-1.postgres.vercel-storage.com:5432/verceldb",
+        'USER':"default",
+        'HOST':"ep-autumn-rice-01715381-pooler.us-east-1.postgres.vercel-storage.com",
+        'PASSWORD':"eGxJj9Oryf5s",
+        'NAME':"verceldb",
     }
 }
 
