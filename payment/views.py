@@ -173,7 +173,6 @@ def receive_balance(request):
             invoice.status = int(status)
             invoice.received = value
             invoice.txid = txid
-            invoice.balance = 0
             invoice.save()
 
             # update user's balance
