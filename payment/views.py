@@ -110,7 +110,7 @@ def receive_payment(request):
 #User balance codes
 @login_required
 def add_balance(request):
-    api_key = 'x3ji0hvKMvtHuDTdEnLbyAA9adz501I10gXP7FgNxCE'
+    api_key = 'f2qchMQe1X3MaEaGNyK5qr1p1vJRCzetaXZ7gylpVS0'
     amount = float(1.00)
     url = 'https://www.blockonomics.co/api/new_address'
     headers = {'Authorization': "Bearer " + api_key}
