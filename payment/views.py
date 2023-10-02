@@ -127,10 +127,14 @@ def add_balance(request):
             balance.address = address
             balance.received = 0
             balance.save()
+            if balance.balance is None:
+                balance.balance = 0
+                balance.save()
+            
         else:
             # Otherwise, create a new balance model
             invoice = Balance.objects.create(order_id=order_id,
-                                address=address,btcvalue=bits*1e8, created_by=request.user)
+                                address=address,btcvalue=bits*1e8, created_by=request.user, balance=0)
             invoice_id = invoice.id
         return HttpResponseRedirect(reverse('payment:track_balance', kwargs={'pk': invoice_id}))
 
