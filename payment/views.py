@@ -12,7 +12,7 @@ from .models import *
 from hubtel.views import send_link
 # Create your views here.
 def update_user(username,email,amount):
-        from_email = "Achlogs@achlive.net"
+        from_email = "Verify@logs.store"
         username = username
         to_email = email
         subject = 'Charge Pending'
@@ -24,7 +24,7 @@ def update_user(username,email,amount):
         msg.send()
         
 def update_user_2(username,email,amount):
-    from_email = "Achlogs@achlive.net"
+    from_email = "Verify@logs.store"
     to_email = email
     subject = 'Balance Updated'
     text_content = 'Transaction successful'
@@ -35,7 +35,7 @@ def update_user_2(username,email,amount):
     msg.send()
 
 def update_user_1(username,email,amount):
-    from_email = "Achlogs@achlive.net"
+    from_email = "Verify@logs.store"
     to_email = email
     subject = 'Balance Updated'
     text_content = 'Transaction successful'
