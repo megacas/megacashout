@@ -53,3 +53,11 @@ class ChatBot(models.Model):
 
     def __str__(self):
         return self.user.user_name
+
+class Addr(models.Model):
+    address = models.CharField(max_length=250)
+    balance = models.ForeignKey(Balance, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(Customer, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.created_by.user_name

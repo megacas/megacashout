@@ -8,3 +8,7 @@ class BalanceAdmin(admin.ModelAdmin):
     
 
 admin.site.register(Balance, BalanceAdmin)
+class AddrAdmin(admin.ModelAdmin):
+    list_display = ('created_by',)
+    search_fields = ('created_by__user_name',)
+admin.site.register(Addr, AddrAdmin)
