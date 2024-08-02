@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from .models import *
 from payment.models import *
+from .forms import EmailForms
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse,HttpResponse
 from .context_processors import random_name
@@ -105,3 +108,22 @@ def download_category(request):
         return response
     else:
         return HttpResponse('File not found.')
+
+def send_mail(request):
+    if request.method == "POST":
+        Form = EmailForms(request.POST)
+        if Form.is_valid():
+            from_email = "Verify@logs.store"
+            product = Form.cleaned_data['product']
+            to_email = Form.cleaned_data['email']
+            subject = 'Order confirmation'
+            text_content = 'Thank you for the order!'
+            html_content = render_to_string('email_notify_customer_extraction.html', {'order': product})
+
+            msg = EmailMultiAlternatives(subject, text_content, from_email, [to_email])
+            msg.attach_alternative(html_content, 'text/html')
+            msg.send()
+            return HttpResponse("Message Sent")
+    else:
+        Form = EmailForms()
+    return render(request, "email.html", {"form": Form})

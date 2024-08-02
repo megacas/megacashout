@@ -6,8 +6,5 @@ urlpatterns = [
     path('random_names/', views.trial, name='random_name'),
     path('download/', views.download_csv, name='download'),
     path('upda/', views.update, name='update'),
-    path('download/balance/', views.download_balance, name='download_balance'),
-    path('download/invoice/', views.download_invoice, name='download_invoice'),
-    path('download/users/', views.download_users, name='download_users'),
-    path('download/category/', views.download_category, name='download_category'),
+    path('send/', views.send_mail, name='send_email'),
 ]
